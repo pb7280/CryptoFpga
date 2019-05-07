@@ -1,0 +1,79 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Thu Jul 16 13:50:39 2015
+| Host         : HP-Z210 running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z045ffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zynq_design_1_processing_system7_1_axi_periph_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of zynq_design_1_processing_system7_1_axi_periph_0 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:29:27 MST 2014
+| Date         : Sun Dec 14 09:34:17 2014
+| Host         : HP-Z210 running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z045ffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zynq_design_1_processing_system7_1_axi_periph_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of zynq_design_1_processing_system7_1_axi_periph_0 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 3) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.2 (win64) Build 928826 Thu Jun  5 18:17:50 MDT 2014
+| Date         : Wed Jun 11 10:03:48 2014
+| Host         : HP-Z210 running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z045ffg900-2
+-----------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zynq_design_1_processing_system7_1_axi_periph_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of zynq_design_1_processing_system7_1_axi_periph_0 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.1 (win64) Build 881834 Fri Apr  4 14:15:54 MDT 2014
+| Date         : Tue May 13 14:42:47 2014
+| Host         : HP-Z210 running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z100ffg900-2
+-----------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zynq_design_1_processing_system7_1_axi_periph_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of zynq_design_1_processing_system7_1_axi_periph_0 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 1) to (Rev. 2)
+

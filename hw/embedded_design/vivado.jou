@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Mar 22 03:32:07 2019
+# Process ID: 17464
+# Current directory: D:/Users/Dillon/Downloads/embedded_design
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23428 D:\Users\Dillon\Downloads\embedded_design\embedded_design.xpr
+# Log file: D:/Users/Dillon/Downloads/embedded_design/vivado.log
+# Journal file: D:/Users/Dillon/Downloads/embedded_design\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Users/Dillon/Downloads/embedded_design/embedded_design.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/Users/Dillon/Downloads/embedded_design/embedded_design.srcs/sources_1/bd/zynq_design_1/zynq_design_1.bd}
+regenerate_bd_layout

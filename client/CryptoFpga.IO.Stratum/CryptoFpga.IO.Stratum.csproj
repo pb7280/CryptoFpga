@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CryptoFpga.Algorithms.Common\CryptoFpga.Algorithms.Common.csproj" />
+    <ProjectReference Include="..\CryptoFpga.Common\CryptoFpga.Common.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="36">
+  <CompositeFile CompositeFileTopName="zynq_design_1" CanBeSetAsTop="true" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1556306971"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1556306971"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1556306971"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1556306971"/>
+    <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="ip\zynq_design_1_processing_system7_1_0\zynq_design_1_processing_system7_1_0.xci" Type="IP">
+        <Instance HierarchyPath="processing_system7_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1392058589" IsTrackable="true" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\zynq_design_1_axi_gpio_1_0\zynq_design_1_axi_gpio_1_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_gpio_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1387476417" IsTrackable="true" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\zynq_design_1_axi_gpio_2_1\zynq_design_1_axi_gpio_2_1.xci" Type="IP">
+        <Instance HierarchyPath="axi_gpio_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1387476449" IsTrackable="true" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\zynq_design_1_axi_gpio_3_2\zynq_design_1_axi_gpio_3_2.xci" Type="IP">
+        <Instance HierarchyPath="axi_gpio_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1387476417" IsTrackable="true" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\zynq_design_1_processing_system7_1_axi_periph_0\zynq_design_1_processing_system7_1_axi_periph_0.xci" Type="IP">
+        <Instance HierarchyPath="processing_system7_1_axi_periph"/>
+        <Properties IsEditable="false" IsVisible="false" Timestamp="1387476402" IsTrackable="true" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\zynq_design_1_proc_sys_reset_0\zynq_design_1_proc_sys_reset_0.xci" Type="IP">
+        <Instance HierarchyPath="proc_sys_reset"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1387476418" IsTrackable="true" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\zynq_design_1_mig_7series_1_0\zynq_design_1_mig_7series_1_0.xci" Type="IP">
+        <Instance HierarchyPath="mig_7series_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1387476445" IsTrackable="true" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\zynq_design_1_axi_mem_intercon_1\zynq_design_1_axi_mem_intercon_1.xci" Type="IP">
+        <Instance HierarchyPath="axi_mem_intercon"/>
+        <Properties IsEditable="false" IsVisible="false" Timestamp="1387476448" IsTrackable="true" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\zynq_design_1_xlconstant_0_0\zynq_design_1_xlconstant_0_0.xci" Type="IP">
+        <Instance HierarchyPath="xlconstant_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1392058590" IsTrackable="true" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\zynq_design_1_proc_sys_reset_0_0\zynq_design_1_proc_sys_reset_0_0.xci" Type="IP">
+        <Instance HierarchyPath="proc_sys_reset_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\zynq_design_1_xbar_0\zynq_design_1_xbar_0.xci" Type="IP">
+        <Instance HierarchyPath="processing_system7_1_axi_periph/xbar"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="synth\zynq_design_1.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+      </File>
+      <File Name="sim\zynq_design_1.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\zynq_design_1_scanhash_sha256d_0_0\zynq_design_1_scanhash_sha256d_0_0.xci" Type="IP">
+        <Instance HierarchyPath="scanhash_sha256d_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\zynq_design_1_auto_pc_0\zynq_design_1_auto_pc_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_mem_intercon/s00_couplers/auto_pc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\zynq_design_1_auto_us_0\zynq_design_1_auto_us_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_mem_intercon/s00_couplers/auto_us"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\zynq_design_1_auto_cc_0\zynq_design_1_auto_cc_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_mem_intercon/s00_couplers/auto_cc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\zynq_design_1_auto_pc_1\zynq_design_1_auto_pc_1.xci" Type="IP">
+        <Instance HierarchyPath="processing_system7_1_axi_periph/s00_couplers/auto_pc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="zynq_design_1_ooc.xdc" Type="XDC">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="OUT_OF_CONTEXT"/>
+      </File>
+      <File Name="hw_handoff\zynq_design_1.hwh" Type="HwHandoff">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="hw_handoff\zynq_design_1_bd.tcl">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="synth\zynq_design_1.hwdef">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+      </File>
+      <File Name="sim\zynq_design_1.protoinst">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+    </FileCollection>
+  </CompositeFile>
+</Root>

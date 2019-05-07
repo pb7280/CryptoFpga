@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# 
+# Start of session at: Mon Apr 15 19:33:02 2019
+# Process ID: 1828
+# Current directory: D:/Users/Dillon/Downloads/embedded_design/embedded_design.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: D:/Users/Dillon/Downloads/embedded_design/embedded_design.sdk/webtalk/webtalk.log
+# Journal file: D:/Users/Dillon/Downloads/embedded_design/embedded_design.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

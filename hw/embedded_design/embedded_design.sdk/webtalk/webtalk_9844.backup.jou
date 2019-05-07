@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# 
+# Start of session at: Thu Jul 16 14:16:46 2015
+# Process ID: 9844
+# Log file: D:/V15_2_Designs/Zynq_Mini_ITX/7z045_embedded/zynq_mini_itx_embedded_design/embedded_design.sdk/webtalk/webtalk.log
+# Journal file: D:/V15_2_Designs/Zynq_Mini_ITX/7z045_embedded/zynq_mini_itx_embedded_design/embedded_design.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

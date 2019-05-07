@@ -1,0 +1,748 @@
+
+
+================================================================
+== Vivado HLS Report for 'sha256_transform'
+================================================================
+* Date:           Fri Apr 26 15:35:01 2019
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        sha256d
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z045ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.013|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  193|  193|  193|  193|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |  192|  192|         3|          -|          -|    64|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond)
+3 --> 
+	4  / true
+4 --> 
+	2  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.46>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%W_15 = alloca i32"   --->   Operation 5 'alloca' 'W_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%W_15_33 = alloca i32"   --->   Operation 6 'alloca' 'W_15_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%W_63 = alloca i32"   --->   Operation 7 'alloca' 'W_63' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%W_63_97 = alloca i32"   --->   Operation 8 'alloca' 'W_63_97' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%W_63_98 = alloca i32"   --->   Operation 9 'alloca' 'W_63_98' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%W_63_99 = alloca i32"   --->   Operation 10 'alloca' 'W_63_99' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%W_63_100 = alloca i32"   --->   Operation 11 'alloca' 'W_63_100' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%W_63_101 = alloca i32"   --->   Operation 12 'alloca' 'W_63_101' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%W_63_102 = alloca i32"   --->   Operation 13 'alloca' 'W_63_102' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%W_63_103 = alloca i32"   --->   Operation 14 'alloca' 'W_63_103' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%W_63_104 = alloca i32"   --->   Operation 15 'alloca' 'W_63_104' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%W_63_105 = alloca i32"   --->   Operation 16 'alloca' 'W_63_105' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%W_63_106 = alloca i32"   --->   Operation 17 'alloca' 'W_63_106' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%W_63_107 = alloca i32"   --->   Operation 18 'alloca' 'W_63_107' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%W_63_108 = alloca i32"   --->   Operation 19 'alloca' 'W_63_108' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%W_63_109 = alloca i32"   --->   Operation 20 'alloca' 'W_63_109' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%W_63_110 = alloca i32"   --->   Operation 21 'alloca' 'W_63_110' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%W_63_111 = alloca i32"   --->   Operation 22 'alloca' 'W_63_111' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%W_63_112 = alloca i32"   --->   Operation 23 'alloca' 'W_63_112' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%W_63_113 = alloca i32"   --->   Operation 24 'alloca' 'W_63_113' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%W_63_114 = alloca i32"   --->   Operation 25 'alloca' 'W_63_114' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%W_63_115 = alloca i32"   --->   Operation 26 'alloca' 'W_63_115' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%W_63_116 = alloca i32"   --->   Operation 27 'alloca' 'W_63_116' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%W_63_117 = alloca i32"   --->   Operation 28 'alloca' 'W_63_117' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%W_63_118 = alloca i32"   --->   Operation 29 'alloca' 'W_63_118' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%W_63_119 = alloca i32"   --->   Operation 30 'alloca' 'W_63_119' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%W_63_120 = alloca i32"   --->   Operation 31 'alloca' 'W_63_120' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%W_63_121 = alloca i32"   --->   Operation 32 'alloca' 'W_63_121' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%W_63_122 = alloca i32"   --->   Operation 33 'alloca' 'W_63_122' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%W_63_123 = alloca i32"   --->   Operation 34 'alloca' 'W_63_123' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%W_63_124 = alloca i32"   --->   Operation 35 'alloca' 'W_63_124' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%W_63_125 = alloca i32"   --->   Operation 36 'alloca' 'W_63_125' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%W_63_126 = alloca i32"   --->   Operation 37 'alloca' 'W_63_126' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%W_63_127 = alloca i32"   --->   Operation 38 'alloca' 'W_63_127' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%W_63_128 = alloca i32"   --->   Operation 39 'alloca' 'W_63_128' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%W_63_129 = alloca i32"   --->   Operation 40 'alloca' 'W_63_129' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%W_63_130 = alloca i32"   --->   Operation 41 'alloca' 'W_63_130' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%W_63_131 = alloca i32"   --->   Operation 42 'alloca' 'W_63_131' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%W_63_132 = alloca i32"   --->   Operation 43 'alloca' 'W_63_132' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%W_63_133 = alloca i32"   --->   Operation 44 'alloca' 'W_63_133' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%W_63_134 = alloca i32"   --->   Operation 45 'alloca' 'W_63_134' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%W_63_135 = alloca i32"   --->   Operation 46 'alloca' 'W_63_135' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%W_63_136 = alloca i32"   --->   Operation 47 'alloca' 'W_63_136' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%W_63_137 = alloca i32"   --->   Operation 48 'alloca' 'W_63_137' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%W_63_138 = alloca i32"   --->   Operation 49 'alloca' 'W_63_138' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%W_63_139 = alloca i32"   --->   Operation 50 'alloca' 'W_63_139' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%W_63_140 = alloca i32"   --->   Operation 51 'alloca' 'W_63_140' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%W_63_141 = alloca i32"   --->   Operation 52 'alloca' 'W_63_141' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%W_15_34 = alloca i32"   --->   Operation 53 'alloca' 'W_15_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%W_15_35 = alloca i32"   --->   Operation 54 'alloca' 'W_15_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%W_15_36 = alloca i32"   --->   Operation 55 'alloca' 'W_15_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%W_15_37 = alloca i32"   --->   Operation 56 'alloca' 'W_15_37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%W_15_38 = alloca i32"   --->   Operation 57 'alloca' 'W_15_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%W_15_39 = alloca i32"   --->   Operation 58 'alloca' 'W_15_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%W_15_40 = alloca i32"   --->   Operation 59 'alloca' 'W_15_40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%W_15_41 = alloca i32"   --->   Operation 60 'alloca' 'W_15_41' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%W_15_42 = alloca i32"   --->   Operation 61 'alloca' 'W_15_42' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%W_15_43 = alloca i32"   --->   Operation 62 'alloca' 'W_15_43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%W_15_44 = alloca i32"   --->   Operation 63 'alloca' 'W_15_44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%W_15_45 = alloca i32"   --->   Operation 64 'alloca' 'W_15_45' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%W_15_46 = alloca i32"   --->   Operation 65 'alloca' 'W_15_46' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%W_15_47 = alloca i32"   --->   Operation 66 'alloca' 'W_15_47' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%W_63_142 = alloca i32"   --->   Operation 67 'alloca' 'W_63_142' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%W_63_143 = alloca i32"   --->   Operation 68 'alloca' 'W_63_143' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%block_15_read_2 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %block_15_read)" [sha256d/sha256d.cpp:110]   --->   Operation 69 'read' 'block_15_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%block_14_read_2 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %block_14_read)" [sha256d/sha256d.cpp:110]   --->   Operation 70 'read' 'block_14_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%block_13_read_2 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %block_13_read)" [sha256d/sha256d.cpp:110]   --->   Operation 71 'read' 'block_13_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%block_12_read_2 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %block_12_read)" [sha256d/sha256d.cpp:110]   --->   Operation 72 'read' 'block_12_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%block_11_read_2 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %block_11_read)" [sha256d/sha256d.cpp:110]   --->   Operation 73 'read' 'block_11_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%block_10_read11 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %block_10_read)" [sha256d/sha256d.cpp:110]   --->   Operation 74 'read' 'block_10_read11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%block_9_read_2 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %block_9_read)" [sha256d/sha256d.cpp:110]   --->   Operation 75 'read' 'block_9_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%block_8_read_2 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %block_8_read)" [sha256d/sha256d.cpp:110]   --->   Operation 76 'read' 'block_8_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%block_7_read_3 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %block_7_read)" [sha256d/sha256d.cpp:110]   --->   Operation 77 'read' 'block_7_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%block_6_read_3 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %block_6_read)" [sha256d/sha256d.cpp:110]   --->   Operation 78 'read' 'block_6_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%block_5_read_3 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %block_5_read)" [sha256d/sha256d.cpp:110]   --->   Operation 79 'read' 'block_5_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%block_4_read_3 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %block_4_read)" [sha256d/sha256d.cpp:110]   --->   Operation 80 'read' 'block_4_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%block_3_read_3 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %block_3_read)" [sha256d/sha256d.cpp:110]   --->   Operation 81 'read' 'block_3_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%block_2_read_2 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %block_2_read)" [sha256d/sha256d.cpp:110]   --->   Operation 82 'read' 'block_2_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%block_1_read_3 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %block_1_read)" [sha256d/sha256d.cpp:110]   --->   Operation 83 'read' 'block_1_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%block_0_read_3 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %block_0_read)" [sha256d/sha256d.cpp:110]   --->   Operation 84 'read' 'block_0_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.46ns)   --->   "br label %1" [sha256d/sha256d.cpp:226]   --->   Operation 85 'br' <Predicate = true> <Delay = 0.46>
+
+State 2 <SV = 1> <Delay = 8.01>
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%c = phi i32 [ -1150833019, %0 ], [ %b, %branch16 ]"   --->   Operation 86 'phi' 'c' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "%b = phi i32 [ 1779033703, %0 ], [ %a, %branch16 ]"   --->   Operation 87 'phi' 'b' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%i = phi i7 [ 0, %0 ], [ %i_1, %branch16 ]"   --->   Operation 88 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 89 [1/1] (0.00ns)   --->   "%d = phi i32 [ 1013904242, %0 ], [ %c, %branch16 ]"   --->   Operation 89 'phi' 'd' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 90 [1/1] (0.00ns)   --->   "%d1 = phi i32 [ -1521486534, %0 ], [ %d, %branch16 ]"   --->   Operation 90 'phi' 'd1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%f = phi i32 [ 1359893119, %0 ], [ %e, %branch16 ]"   --->   Operation 91 'phi' 'f' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%g = phi i32 [ -1694144372, %0 ], [ %f, %branch16 ]"   --->   Operation 92 'phi' 'g' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 93 [1/1] (0.00ns)   --->   "%h = phi i32 [ 528734635, %0 ], [ %g, %branch16 ]"   --->   Operation 93 'phi' 'h' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%h1 = phi i32 [ 1541459225, %0 ], [ %h, %branch16 ]"   --->   Operation 94 'phi' 'h1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%W_15_load = load i32* %W_15"   --->   Operation 95 'load' 'W_15_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%W_15_33_load = load i32* %W_15_33"   --->   Operation 96 'load' 'W_15_33_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 97 [1/1] (0.00ns)   --->   "%W_63_load = load i32* %W_63"   --->   Operation 97 'load' 'W_63_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%W_63_97_load = load i32* %W_63_97"   --->   Operation 98 'load' 'W_63_97_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 99 [1/1] (0.00ns)   --->   "%W_63_98_load = load i32* %W_63_98"   --->   Operation 99 'load' 'W_63_98_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%W_63_99_load = load i32* %W_63_99"   --->   Operation 100 'load' 'W_63_99_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%W_63_100_load = load i32* %W_63_100"   --->   Operation 101 'load' 'W_63_100_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%W_63_101_load = load i32* %W_63_101"   --->   Operation 102 'load' 'W_63_101_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%W_63_102_load = load i32* %W_63_102"   --->   Operation 103 'load' 'W_63_102_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "%W_63_103_load = load i32* %W_63_103"   --->   Operation 104 'load' 'W_63_103_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 105 [1/1] (0.00ns)   --->   "%W_63_104_load = load i32* %W_63_104"   --->   Operation 105 'load' 'W_63_104_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 106 [1/1] (0.00ns)   --->   "%W_63_105_load = load i32* %W_63_105"   --->   Operation 106 'load' 'W_63_105_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%W_63_106_load = load i32* %W_63_106"   --->   Operation 107 'load' 'W_63_106_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 108 [1/1] (0.00ns)   --->   "%W_63_107_load = load i32* %W_63_107"   --->   Operation 108 'load' 'W_63_107_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 109 [1/1] (0.00ns)   --->   "%W_63_108_load = load i32* %W_63_108"   --->   Operation 109 'load' 'W_63_108_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 110 [1/1] (0.00ns)   --->   "%W_63_109_load = load i32* %W_63_109"   --->   Operation 110 'load' 'W_63_109_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 111 [1/1] (0.00ns)   --->   "%W_63_110_load = load i32* %W_63_110"   --->   Operation 111 'load' 'W_63_110_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 112 [1/1] (0.00ns)   --->   "%W_63_111_load = load i32* %W_63_111"   --->   Operation 112 'load' 'W_63_111_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 113 [1/1] (0.00ns)   --->   "%W_63_112_load = load i32* %W_63_112"   --->   Operation 113 'load' 'W_63_112_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 114 [1/1] (0.00ns)   --->   "%W_63_113_load = load i32* %W_63_113"   --->   Operation 114 'load' 'W_63_113_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 115 [1/1] (0.00ns)   --->   "%W_63_114_load = load i32* %W_63_114"   --->   Operation 115 'load' 'W_63_114_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 116 [1/1] (0.00ns)   --->   "%W_63_115_load = load i32* %W_63_115"   --->   Operation 116 'load' 'W_63_115_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 117 [1/1] (0.00ns)   --->   "%W_63_116_load = load i32* %W_63_116"   --->   Operation 117 'load' 'W_63_116_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 118 [1/1] (0.00ns)   --->   "%W_63_117_load = load i32* %W_63_117"   --->   Operation 118 'load' 'W_63_117_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 119 [1/1] (0.00ns)   --->   "%W_63_118_load = load i32* %W_63_118"   --->   Operation 119 'load' 'W_63_118_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 120 [1/1] (0.00ns)   --->   "%W_63_119_load = load i32* %W_63_119"   --->   Operation 120 'load' 'W_63_119_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 121 [1/1] (0.00ns)   --->   "%W_63_120_load = load i32* %W_63_120"   --->   Operation 121 'load' 'W_63_120_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 122 [1/1] (0.00ns)   --->   "%W_63_121_load = load i32* %W_63_121"   --->   Operation 122 'load' 'W_63_121_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 123 [1/1] (0.00ns)   --->   "%W_63_122_load = load i32* %W_63_122"   --->   Operation 123 'load' 'W_63_122_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 124 [1/1] (0.00ns)   --->   "%W_63_123_load = load i32* %W_63_123"   --->   Operation 124 'load' 'W_63_123_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 125 [1/1] (0.00ns)   --->   "%W_63_124_load = load i32* %W_63_124"   --->   Operation 125 'load' 'W_63_124_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 126 [1/1] (0.00ns)   --->   "%W_63_125_load = load i32* %W_63_125"   --->   Operation 126 'load' 'W_63_125_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 127 [1/1] (0.00ns)   --->   "%W_63_126_load = load i32* %W_63_126"   --->   Operation 127 'load' 'W_63_126_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 128 [1/1] (0.00ns)   --->   "%W_63_127_load = load i32* %W_63_127"   --->   Operation 128 'load' 'W_63_127_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 129 [1/1] (0.00ns)   --->   "%W_63_128_load = load i32* %W_63_128"   --->   Operation 129 'load' 'W_63_128_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 130 [1/1] (0.00ns)   --->   "%W_63_129_load = load i32* %W_63_129"   --->   Operation 130 'load' 'W_63_129_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 131 [1/1] (0.00ns)   --->   "%W_63_130_load = load i32* %W_63_130"   --->   Operation 131 'load' 'W_63_130_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 132 [1/1] (0.00ns)   --->   "%W_63_131_load = load i32* %W_63_131"   --->   Operation 132 'load' 'W_63_131_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 133 [1/1] (0.00ns)   --->   "%W_63_132_load = load i32* %W_63_132"   --->   Operation 133 'load' 'W_63_132_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 134 [1/1] (0.00ns)   --->   "%W_63_133_load = load i32* %W_63_133"   --->   Operation 134 'load' 'W_63_133_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 135 [1/1] (0.00ns)   --->   "%W_63_134_load = load i32* %W_63_134"   --->   Operation 135 'load' 'W_63_134_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 136 [1/1] (0.00ns)   --->   "%W_63_135_load = load i32* %W_63_135"   --->   Operation 136 'load' 'W_63_135_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 137 [1/1] (0.00ns)   --->   "%W_63_136_load = load i32* %W_63_136"   --->   Operation 137 'load' 'W_63_136_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 138 [1/1] (0.00ns)   --->   "%W_63_137_load = load i32* %W_63_137"   --->   Operation 138 'load' 'W_63_137_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 139 [1/1] (0.00ns)   --->   "%W_63_138_load = load i32* %W_63_138"   --->   Operation 139 'load' 'W_63_138_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 140 [1/1] (0.00ns)   --->   "%W_63_139_load = load i32* %W_63_139"   --->   Operation 140 'load' 'W_63_139_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 141 [1/1] (0.00ns)   --->   "%W_63_140_load = load i32* %W_63_140"   --->   Operation 141 'load' 'W_63_140_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 142 [1/1] (0.00ns)   --->   "%W_63_141_load = load i32* %W_63_141"   --->   Operation 142 'load' 'W_63_141_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 143 [1/1] (1.06ns)   --->   "%exitcond = icmp eq i7 %i, -64" [sha256d/sha256d.cpp:226]   --->   Operation 143 'icmp' 'exitcond' <Predicate = true> <Delay = 1.06> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 144 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 64, i64 64, i64 64)"   --->   Operation 144 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 145 [1/1] (1.31ns)   --->   "%i_1 = add i7 %i, 1" [sha256d/sha256d.cpp:226]   --->   Operation 145 'add' 'i_1' <Predicate = true> <Delay = 1.31> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 146 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %._crit_edge, label %2" [sha256d/sha256d.cpp:226]   --->   Operation 146 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 147 [1/1] (0.00ns)   --->   "%tmp = call i3 @_ssdm_op_PartSelect.i3.i7.i32.i32(i7 %i, i32 4, i32 6)" [sha256d/sha256d.cpp:230]   --->   Operation 147 'partselect' 'tmp' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 148 [1/1] (0.98ns)   --->   "%icmp = icmp eq i3 %tmp, 0" [sha256d/sha256d.cpp:230]   --->   Operation 148 'icmp' 'icmp' <Predicate = (!exitcond)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 149 [1/1] (0.00ns)   --->   "br i1 %icmp, label %3, label %4" [sha256d/sha256d.cpp:230]   --->   Operation 149 'br' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 150 [1/1] (0.00ns)   --->   "%tmp_82 = trunc i7 %i to i6" [sha256d/sha256d.cpp:236]   --->   Operation 150 'trunc' 'tmp_82' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 151 [1/1] (2.17ns)   --->   "switch i6 %tmp_82, label %branch317 [
+    i6 16, label %branch270
+    i6 17, label %branch271
+    i6 18, label %branch272
+    i6 19, label %branch273
+    i6 20, label %branch274
+    i6 21, label %branch275
+    i6 22, label %branch276
+    i6 23, label %branch277
+    i6 24, label %branch278
+    i6 25, label %branch279
+    i6 26, label %branch280
+    i6 27, label %branch281
+    i6 28, label %branch282
+    i6 29, label %branch283
+    i6 30, label %branch284
+    i6 31, label %branch285
+    i6 -32, label %branch286
+    i6 -31, label %branch287
+    i6 -30, label %branch288
+    i6 -29, label %branch289
+    i6 -28, label %branch290
+    i6 -27, label %branch291
+    i6 -26, label %branch292
+    i6 -25, label %branch293
+    i6 -24, label %branch294
+    i6 -23, label %branch295
+    i6 -22, label %branch296
+    i6 -21, label %branch297
+    i6 -20, label %branch298
+    i6 -19, label %branch299
+    i6 -18, label %branch300
+    i6 -17, label %branch301
+    i6 -16, label %branch302
+    i6 -15, label %branch303
+    i6 -14, label %branch304
+    i6 -13, label %branch305
+    i6 -12, label %branch306
+    i6 -11, label %branch307
+    i6 -10, label %branch308
+    i6 -9, label %branch309
+    i6 -8, label %branch310
+    i6 -7, label %branch311
+    i6 -6, label %branch312
+    i6 -5, label %branch313
+    i6 -4, label %branch314
+    i6 -3, label %branch315
+    i6 -2, label %branch316
+  ]" [sha256d/sha256d.cpp:236]   --->   Operation 151 'switch' <Predicate = (!exitcond & !icmp)> <Delay = 2.17>
+ST_2 : Operation 152 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 152 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 62)> <Delay = 2.17>
+ST_2 : Operation 153 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 153 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 61)> <Delay = 2.17>
+ST_2 : Operation 154 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 154 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 60)> <Delay = 2.17>
+ST_2 : Operation 155 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 155 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 59)> <Delay = 2.17>
+ST_2 : Operation 156 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 156 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 58)> <Delay = 2.17>
+ST_2 : Operation 157 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 157 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 57)> <Delay = 2.17>
+ST_2 : Operation 158 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 158 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 56)> <Delay = 2.17>
+ST_2 : Operation 159 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 159 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 55)> <Delay = 2.17>
+ST_2 : Operation 160 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 160 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 54)> <Delay = 2.17>
+ST_2 : Operation 161 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 161 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 53)> <Delay = 2.17>
+ST_2 : Operation 162 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 162 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 52)> <Delay = 2.17>
+ST_2 : Operation 163 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 163 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 51)> <Delay = 2.17>
+ST_2 : Operation 164 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 164 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 50)> <Delay = 2.17>
+ST_2 : Operation 165 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 165 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 49)> <Delay = 2.17>
+ST_2 : Operation 166 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 166 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 48)> <Delay = 2.17>
+ST_2 : Operation 167 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 167 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 47)> <Delay = 2.17>
+ST_2 : Operation 168 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 168 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 46)> <Delay = 2.17>
+ST_2 : Operation 169 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 169 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 45)> <Delay = 2.17>
+ST_2 : Operation 170 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 170 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 44)> <Delay = 2.17>
+ST_2 : Operation 171 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 171 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 43)> <Delay = 2.17>
+ST_2 : Operation 172 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 172 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 42)> <Delay = 2.17>
+ST_2 : Operation 173 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 173 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 41)> <Delay = 2.17>
+ST_2 : Operation 174 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 174 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 40)> <Delay = 2.17>
+ST_2 : Operation 175 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 175 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 39)> <Delay = 2.17>
+ST_2 : Operation 176 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 176 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 38)> <Delay = 2.17>
+ST_2 : Operation 177 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 177 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 37)> <Delay = 2.17>
+ST_2 : Operation 178 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 178 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 36)> <Delay = 2.17>
+ST_2 : Operation 179 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 179 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 35)> <Delay = 2.17>
+ST_2 : Operation 180 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 180 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 34)> <Delay = 2.17>
+ST_2 : Operation 181 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 181 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 33)> <Delay = 2.17>
+ST_2 : Operation 182 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 182 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 32)> <Delay = 2.17>
+ST_2 : Operation 183 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 183 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 31)> <Delay = 2.17>
+ST_2 : Operation 184 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 184 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 30)> <Delay = 2.17>
+ST_2 : Operation 185 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 185 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 29)> <Delay = 2.17>
+ST_2 : Operation 186 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 186 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 28)> <Delay = 2.17>
+ST_2 : Operation 187 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 187 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 27)> <Delay = 2.17>
+ST_2 : Operation 188 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 188 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 26)> <Delay = 2.17>
+ST_2 : Operation 189 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 189 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 25)> <Delay = 2.17>
+ST_2 : Operation 190 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 190 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 24)> <Delay = 2.17>
+ST_2 : Operation 191 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 191 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 23)> <Delay = 2.17>
+ST_2 : Operation 192 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 192 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 22)> <Delay = 2.17>
+ST_2 : Operation 193 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 193 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 21)> <Delay = 2.17>
+ST_2 : Operation 194 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 194 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 20)> <Delay = 2.17>
+ST_2 : Operation 195 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 195 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 19)> <Delay = 2.17>
+ST_2 : Operation 196 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 196 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 18)> <Delay = 2.17>
+ST_2 : Operation 197 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 197 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 17)> <Delay = 2.17>
+ST_2 : Operation 198 [1/1] (2.17ns)   --->   "br label %branch270" [sha256d/sha256d.cpp:236]   --->   Operation 198 'br' <Predicate = (!exitcond & !icmp & tmp_82 != 16 & tmp_82 != 17 & tmp_82 != 18 & tmp_82 != 19 & tmp_82 != 20 & tmp_82 != 21 & tmp_82 != 22 & tmp_82 != 23 & tmp_82 != 24 & tmp_82 != 25 & tmp_82 != 26 & tmp_82 != 27 & tmp_82 != 28 & tmp_82 != 29 & tmp_82 != 30 & tmp_82 != 31 & tmp_82 != 32 & tmp_82 != 33 & tmp_82 != 34 & tmp_82 != 35 & tmp_82 != 36 & tmp_82 != 37 & tmp_82 != 38 & tmp_82 != 39 & tmp_82 != 40 & tmp_82 != 41 & tmp_82 != 42 & tmp_82 != 43 & tmp_82 != 44 & tmp_82 != 45 & tmp_82 != 46 & tmp_82 != 47 & tmp_82 != 48 & tmp_82 != 49 & tmp_82 != 50 & tmp_82 != 51 & tmp_82 != 52 & tmp_82 != 53 & tmp_82 != 54 & tmp_82 != 55 & tmp_82 != 56 & tmp_82 != 57 & tmp_82 != 58 & tmp_82 != 59 & tmp_82 != 60 & tmp_82 != 61 & tmp_82 != 62)> <Delay = 2.17>
+ST_2 : Operation 199 [1/1] (0.00ns)   --->   "%W_load_phi = phi i32 [ %W_15_33_load, %branch271 ], [ %W_63_load, %branch272 ], [ %W_63_97_load, %branch273 ], [ %W_63_98_load, %branch274 ], [ %W_63_99_load, %branch275 ], [ %W_63_100_load, %branch276 ], [ %W_63_101_load, %branch277 ], [ %W_63_102_load, %branch278 ], [ %W_63_103_load, %branch279 ], [ %W_63_104_load, %branch280 ], [ %W_63_105_load, %branch281 ], [ %W_63_106_load, %branch282 ], [ %W_63_107_load, %branch283 ], [ %W_63_108_load, %branch284 ], [ %W_63_109_load, %branch285 ], [ %W_63_110_load, %branch286 ], [ %W_63_111_load, %branch287 ], [ %W_63_112_load, %branch288 ], [ %W_63_113_load, %branch289 ], [ %W_63_114_load, %branch290 ], [ %W_63_115_load, %branch291 ], [ %W_63_116_load, %branch292 ], [ %W_63_117_load, %branch293 ], [ %W_63_118_load, %branch294 ], [ %W_63_119_load, %branch295 ], [ %W_63_120_load, %branch296 ], [ %W_63_121_load, %branch297 ], [ %W_63_122_load, %branch298 ], [ %W_63_123_load, %branch299 ], [ %W_63_124_load, %branch300 ], [ %W_63_125_load, %branch301 ], [ %W_63_126_load, %branch302 ], [ %W_63_127_load, %branch303 ], [ %W_63_128_load, %branch304 ], [ %W_63_129_load, %branch305 ], [ %W_63_130_load, %branch306 ], [ %W_63_131_load, %branch307 ], [ %W_63_132_load, %branch308 ], [ %W_63_133_load, %branch309 ], [ %W_63_134_load, %branch310 ], [ %W_63_135_load, %branch311 ], [ %W_63_136_load, %branch312 ], [ %W_63_137_load, %branch313 ], [ %W_63_138_load, %branch314 ], [ %W_63_139_load, %branch315 ], [ %W_63_140_load, %branch316 ], [ %W_63_141_load, %branch317 ], [ %W_15_load, %4 ]" [sha256d/sha256d.cpp:236]   --->   Operation 199 'phi' 'W_load_phi' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 200 [1/1] (0.00ns)   --->   "%W_15_34_load = load i32* %W_15_34" [sha256d/sha256d.cpp:236]   --->   Operation 200 'load' 'W_15_34_load' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 201 [1/1] (0.00ns)   --->   "%W_15_35_load = load i32* %W_15_35" [sha256d/sha256d.cpp:236]   --->   Operation 201 'load' 'W_15_35_load' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 202 [1/1] (0.00ns)   --->   "%W_15_36_load = load i32* %W_15_36" [sha256d/sha256d.cpp:236]   --->   Operation 202 'load' 'W_15_36_load' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 203 [1/1] (0.00ns)   --->   "%W_15_37_load = load i32* %W_15_37" [sha256d/sha256d.cpp:236]   --->   Operation 203 'load' 'W_15_37_load' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 204 [1/1] (0.00ns)   --->   "%W_15_38_load = load i32* %W_15_38" [sha256d/sha256d.cpp:236]   --->   Operation 204 'load' 'W_15_38_load' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 205 [1/1] (0.00ns)   --->   "%W_15_39_load = load i32* %W_15_39" [sha256d/sha256d.cpp:236]   --->   Operation 205 'load' 'W_15_39_load' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 206 [1/1] (0.00ns)   --->   "%W_15_40_load = load i32* %W_15_40" [sha256d/sha256d.cpp:236]   --->   Operation 206 'load' 'W_15_40_load' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 207 [1/1] (0.00ns)   --->   "%W_15_41_load = load i32* %W_15_41" [sha256d/sha256d.cpp:236]   --->   Operation 207 'load' 'W_15_41_load' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 208 [1/1] (0.00ns)   --->   "%W_15_42_load = load i32* %W_15_42" [sha256d/sha256d.cpp:236]   --->   Operation 208 'load' 'W_15_42_load' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 209 [1/1] (0.00ns)   --->   "%W_15_43_load = load i32* %W_15_43" [sha256d/sha256d.cpp:236]   --->   Operation 209 'load' 'W_15_43_load' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 210 [1/1] (0.00ns)   --->   "%W_15_44_load = load i32* %W_15_44" [sha256d/sha256d.cpp:236]   --->   Operation 210 'load' 'W_15_44_load' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 211 [1/1] (0.00ns)   --->   "%W_15_45_load = load i32* %W_15_45" [sha256d/sha256d.cpp:236]   --->   Operation 211 'load' 'W_15_45_load' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 212 [1/1] (0.00ns)   --->   "%W_15_46_load = load i32* %W_15_46" [sha256d/sha256d.cpp:236]   --->   Operation 212 'load' 'W_15_46_load' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 213 [1/1] (0.00ns)   --->   "%W_15_47_load = load i32* %W_15_47" [sha256d/sha256d.cpp:236]   --->   Operation 213 'load' 'W_15_47_load' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 214 [1/1] (0.00ns) (grouped into LUT with out node tmp_20)   --->   "%tmp_12 = call i15 @_ssdm_op_PartSelect.i15.i32.i32.i32(i32 %W_load_phi, i32 17, i32 31)" [sha256d/sha256d.cpp:236]   --->   Operation 214 'partselect' 'tmp_12' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 215 [1/1] (0.00ns) (grouped into LUT with out node tmp_20)   --->   "%tmp_83 = trunc i32 %W_load_phi to i17" [sha256d/sha256d.cpp:236]   --->   Operation 215 'trunc' 'tmp_83' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 216 [1/1] (0.00ns) (grouped into LUT with out node tmp_20)   --->   "%tmp_14 = call i32 @_ssdm_op_BitConcatenate.i32.i17.i15(i17 %tmp_83, i15 %tmp_12)" [sha256d/sha256d.cpp:236]   --->   Operation 216 'bitconcatenate' 'tmp_14' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 217 [1/1] (0.00ns) (grouped into LUT with out node tmp_20)   --->   "%tmp_15 = call i13 @_ssdm_op_PartSelect.i13.i32.i32.i32(i32 %W_load_phi, i32 19, i32 31)" [sha256d/sha256d.cpp:236]   --->   Operation 217 'partselect' 'tmp_15' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 218 [1/1] (0.00ns) (grouped into LUT with out node tmp_20)   --->   "%tmp_84 = trunc i32 %W_load_phi to i19" [sha256d/sha256d.cpp:236]   --->   Operation 218 'trunc' 'tmp_84' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 219 [1/1] (0.00ns) (grouped into LUT with out node tmp_20)   --->   "%tmp_17 = call i32 @_ssdm_op_BitConcatenate.i32.i19.i13(i19 %tmp_84, i13 %tmp_15)" [sha256d/sha256d.cpp:236]   --->   Operation 219 'bitconcatenate' 'tmp_17' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 220 [1/1] (0.00ns) (grouped into LUT with out node tmp_20)   --->   "%tmp_18 = call i22 @_ssdm_op_PartSelect.i22.i32.i32.i32(i32 %W_load_phi, i32 10, i32 31)" [sha256d/sha256d.cpp:236]   --->   Operation 220 'partselect' 'tmp_18' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 221 [1/1] (0.00ns) (grouped into LUT with out node tmp_20)   --->   "%tmp_67 = zext i22 %tmp_18 to i32" [sha256d/sha256d.cpp:236]   --->   Operation 221 'zext' 'tmp_67' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 222 [1/1] (0.00ns) (grouped into LUT with out node tmp_20)   --->   "%tmp16 = xor i32 %tmp_67, %tmp_17" [sha256d/sha256d.cpp:236]   --->   Operation 222 'xor' 'tmp16' <Predicate = (!exitcond & !icmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 223 [1/1] (0.80ns) (out node of the LUT)   --->   "%tmp_20 = xor i32 %tmp16, %tmp_14" [sha256d/sha256d.cpp:236]   --->   Operation 223 'xor' 'tmp_20' <Predicate = (!exitcond & !icmp)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 224 [1/1] (2.53ns)   --->   "%W_load_1_phi = call i32 @_ssdm_op_Mux.ap_auto.64i32.i6(i32 %W_63_136_load, i32 %W_63_136_load, i32 %W_63_136_load, i32 %W_63_136_load, i32 %W_63_136_load, i32 %W_63_136_load, i32 %W_63_136_load, i32 %W_63_136_load, i32 %W_63_136_load, i32 %W_63_136_load, i32 %W_63_136_load, i32 %W_63_136_load, i32 %W_63_136_load, i32 %W_63_136_load, i32 %W_63_136_load, i32 %W_63_136_load, i32 %W_15_43_load, i32 %W_15_44_load, i32 %W_15_45_load, i32 %W_15_46_load, i32 %W_15_47_load, i32 %W_15_load, i32 %W_15_33_load, i32 %W_63_load, i32 %W_63_97_load, i32 %W_63_98_load, i32 %W_63_99_load, i32 %W_63_100_load, i32 %W_63_101_load, i32 %W_63_102_load, i32 %W_63_103_load, i32 %W_63_104_load, i32 %W_63_105_load, i32 %W_63_106_load, i32 %W_63_107_load, i32 %W_63_108_load, i32 %W_63_109_load, i32 %W_63_110_load, i32 %W_63_111_load, i32 %W_63_112_load, i32 %W_63_113_load, i32 %W_63_114_load, i32 %W_63_115_load, i32 %W_63_116_load, i32 %W_63_117_load, i32 %W_63_118_load, i32 %W_63_119_load, i32 %W_63_120_load, i32 %W_63_121_load, i32 %W_63_122_load, i32 %W_63_123_load, i32 %W_63_124_load, i32 %W_63_125_load, i32 %W_63_126_load, i32 %W_63_127_load, i32 %W_63_128_load, i32 %W_63_129_load, i32 %W_63_130_load, i32 %W_63_131_load, i32 %W_63_132_load, i32 %W_63_133_load, i32 %W_63_134_load, i32 %W_63_135_load, i32 %W_63_136_load, i6 %tmp_82)" [sha256d/sha256d.cpp:236]   --->   Operation 224 'mux' 'W_load_1_phi' <Predicate = (!exitcond & !icmp)> <Delay = 2.53> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 225 [1/1] (2.53ns)   --->   "%W_load_2_phi = call i32 @_ssdm_op_Mux.ap_auto.64i32.i6(i32 %W_63_128_load, i32 %W_63_128_load, i32 %W_63_128_load, i32 %W_63_128_load, i32 %W_63_128_load, i32 %W_63_128_load, i32 %W_63_128_load, i32 %W_63_128_load, i32 %W_63_128_load, i32 %W_63_128_load, i32 %W_63_128_load, i32 %W_63_128_load, i32 %W_63_128_load, i32 %W_63_128_load, i32 %W_63_128_load, i32 %W_63_128_load, i32 %W_15_35_load, i32 %W_15_36_load, i32 %W_15_37_load, i32 %W_15_38_load, i32 %W_15_39_load, i32 %W_15_40_load, i32 %W_15_41_load, i32 %W_15_42_load, i32 %W_15_43_load, i32 %W_15_44_load, i32 %W_15_45_load, i32 %W_15_46_load, i32 %W_15_47_load, i32 %W_15_load, i32 %W_15_33_load, i32 %W_63_load, i32 %W_63_97_load, i32 %W_63_98_load, i32 %W_63_99_load, i32 %W_63_100_load, i32 %W_63_101_load, i32 %W_63_102_load, i32 %W_63_103_load, i32 %W_63_104_load, i32 %W_63_105_load, i32 %W_63_106_load, i32 %W_63_107_load, i32 %W_63_108_load, i32 %W_63_109_load, i32 %W_63_110_load, i32 %W_63_111_load, i32 %W_63_112_load, i32 %W_63_113_load, i32 %W_63_114_load, i32 %W_63_115_load, i32 %W_63_116_load, i32 %W_63_117_load, i32 %W_63_118_load, i32 %W_63_119_load, i32 %W_63_120_load, i32 %W_63_121_load, i32 %W_63_122_load, i32 %W_63_123_load, i32 %W_63_124_load, i32 %W_63_125_load, i32 %W_63_126_load, i32 %W_63_127_load, i32 %W_63_128_load, i6 %tmp_82)" [sha256d/sha256d.cpp:236]   --->   Operation 225 'mux' 'W_load_2_phi' <Predicate = (!exitcond & !icmp)> <Delay = 2.53> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 226 [1/1] (0.00ns) (grouped into LUT with out node tmp19)   --->   "%tmp_25 = call i25 @_ssdm_op_PartSelect.i25.i32.i32.i32(i32 %W_load_2_phi, i32 7, i32 31)" [sha256d/sha256d.cpp:236]   --->   Operation 226 'partselect' 'tmp_25' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 227 [1/1] (0.00ns) (grouped into LUT with out node tmp19)   --->   "%tmp_85 = trunc i32 %W_load_2_phi to i7" [sha256d/sha256d.cpp:236]   --->   Operation 227 'trunc' 'tmp_85' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 228 [1/1] (0.00ns) (grouped into LUT with out node tmp19)   --->   "%tmp_27 = call i32 @_ssdm_op_BitConcatenate.i32.i7.i25(i7 %tmp_85, i25 %tmp_25)" [sha256d/sha256d.cpp:236]   --->   Operation 228 'bitconcatenate' 'tmp_27' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 229 [1/1] (0.00ns) (grouped into LUT with out node tmp19)   --->   "%tmp_28 = call i14 @_ssdm_op_PartSelect.i14.i32.i32.i32(i32 %W_load_2_phi, i32 18, i32 31)" [sha256d/sha256d.cpp:236]   --->   Operation 229 'partselect' 'tmp_28' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 230 [1/1] (0.00ns) (grouped into LUT with out node tmp19)   --->   "%tmp_86 = trunc i32 %W_load_2_phi to i18" [sha256d/sha256d.cpp:236]   --->   Operation 230 'trunc' 'tmp_86' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 231 [1/1] (0.00ns) (grouped into LUT with out node tmp19)   --->   "%tmp_30 = call i32 @_ssdm_op_BitConcatenate.i32.i18.i14(i18 %tmp_86, i14 %tmp_28)" [sha256d/sha256d.cpp:236]   --->   Operation 231 'bitconcatenate' 'tmp_30' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 232 [1/1] (0.00ns) (grouped into LUT with out node tmp19)   --->   "%tmp_31 = call i29 @_ssdm_op_PartSelect.i29.i32.i32.i32(i32 %W_load_2_phi, i32 3, i32 31)" [sha256d/sha256d.cpp:236]   --->   Operation 232 'partselect' 'tmp_31' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 233 [1/1] (0.00ns) (grouped into LUT with out node tmp19)   --->   "%tmp_72 = zext i29 %tmp_31 to i32" [sha256d/sha256d.cpp:236]   --->   Operation 233 'zext' 'tmp_72' <Predicate = (!exitcond & !icmp)> <Delay = 0.00>
+ST_2 : Operation 234 [1/1] (0.00ns) (grouped into LUT with out node tmp19)   --->   "%tmp17 = xor i32 %tmp_72, %tmp_30" [sha256d/sha256d.cpp:236]   --->   Operation 234 'xor' 'tmp17' <Predicate = (!exitcond & !icmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 235 [1/1] (0.00ns) (grouped into LUT with out node tmp19)   --->   "%tmp_33 = xor i32 %tmp17, %tmp_27" [sha256d/sha256d.cpp:236]   --->   Operation 235 'xor' 'tmp_33' <Predicate = (!exitcond & !icmp)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 236 [1/1] (2.53ns)   --->   "%W_load_3_phi = call i32 @_ssdm_op_Mux.ap_auto.64i32.i6(i32 %W_63_127_load, i32 %W_63_127_load, i32 %W_63_127_load, i32 %W_63_127_load, i32 %W_63_127_load, i32 %W_63_127_load, i32 %W_63_127_load, i32 %W_63_127_load, i32 %W_63_127_load, i32 %W_63_127_load, i32 %W_63_127_load, i32 %W_63_127_load, i32 %W_63_127_load, i32 %W_63_127_load, i32 %W_63_127_load, i32 %W_63_127_load, i32 %W_15_34_load, i32 %W_15_35_load, i32 %W_15_36_load, i32 %W_15_37_load, i32 %W_15_38_load, i32 %W_15_39_load, i32 %W_15_40_load, i32 %W_15_41_load, i32 %W_15_42_load, i32 %W_15_43_load, i32 %W_15_44_load, i32 %W_15_45_load, i32 %W_15_46_load, i32 %W_15_47_load, i32 %W_15_load, i32 %W_15_33_load, i32 %W_63_load, i32 %W_63_97_load, i32 %W_63_98_load, i32 %W_63_99_load, i32 %W_63_100_load, i32 %W_63_101_load, i32 %W_63_102_load, i32 %W_63_103_load, i32 %W_63_104_load, i32 %W_63_105_load, i32 %W_63_106_load, i32 %W_63_107_load, i32 %W_63_108_load, i32 %W_63_109_load, i32 %W_63_110_load, i32 %W_63_111_load, i32 %W_63_112_load, i32 %W_63_113_load, i32 %W_63_114_load, i32 %W_63_115_load, i32 %W_63_116_load, i32 %W_63_117_load, i32 %W_63_118_load, i32 %W_63_119_load, i32 %W_63_120_load, i32 %W_63_121_load, i32 %W_63_122_load, i32 %W_63_123_load, i32 %W_63_124_load, i32 %W_63_125_load, i32 %W_63_126_load, i32 %W_63_127_load, i6 %tmp_82)" [sha256d/sha256d.cpp:236]   --->   Operation 236 'mux' 'W_load_3_phi' <Predicate = (!exitcond & !icmp)> <Delay = 2.53> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 237 [1/1] (1.89ns) (out node of the LUT)   --->   "%tmp19 = add i32 %tmp_33, %W_load_1_phi" [sha256d/sha256d.cpp:236]   --->   Operation 237 'add' 'tmp19' <Predicate = (!exitcond & !icmp)> <Delay = 1.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 238 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp20 = add i32 %W_load_3_phi, %tmp_20" [sha256d/sha256d.cpp:236]   --->   Operation 238 'add' 'tmp20' <Predicate = (!exitcond & !icmp)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.79> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 239 [1/1] (3.58ns) (root node of TernaryAdder)   --->   "%W_16 = add i32 %tmp19, %tmp20" [sha256d/sha256d.cpp:236]   --->   Operation 239 'add' 'W_16' <Predicate = (!exitcond & !icmp)> <Delay = 3.58> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.79> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 240 [1/1] (1.06ns)   --->   "switch i6 %tmp_82, label %branch63 [
+    i6 16, label %branch270.branch16_crit_edge
+    i6 17, label %branch17
+    i6 18, label %branch18
+    i6 19, label %branch19
+    i6 20, label %branch20
+    i6 21, label %branch21
+    i6 22, label %branch22
+    i6 23, label %branch23
+    i6 24, label %branch24
+    i6 25, label %branch25
+    i6 26, label %branch26
+    i6 27, label %branch27
+    i6 28, label %branch28
+    i6 29, label %branch29
+    i6 30, label %branch30
+    i6 31, label %branch31
+    i6 -32, label %branch32
+    i6 -31, label %branch33
+    i6 -30, label %branch34
+    i6 -29, label %branch35
+    i6 -28, label %branch36
+    i6 -27, label %branch37
+    i6 -26, label %branch38
+    i6 -25, label %branch39
+    i6 -24, label %branch40
+    i6 -23, label %branch41
+    i6 -22, label %branch42
+    i6 -21, label %branch43
+    i6 -20, label %branch44
+    i6 -19, label %branch45
+    i6 -18, label %branch46
+    i6 -17, label %branch47
+    i6 -16, label %branch48
+    i6 -15, label %branch49
+    i6 -14, label %branch50
+    i6 -13, label %branch51
+    i6 -12, label %branch52
+    i6 -11, label %branch53
+    i6 -10, label %branch54
+    i6 -9, label %branch55
+    i6 -8, label %branch56
+    i6 -7, label %branch57
+    i6 -6, label %branch58
+    i6 -5, label %branch59
+    i6 -4, label %branch60
+    i6 -3, label %branch61
+    i6 -2, label %branch62
+  ]" [sha256d/sha256d.cpp:236]   --->   Operation 240 'switch' <Predicate = (!exitcond & !icmp)> <Delay = 1.06>
+ST_2 : Operation 241 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_142" [sha256d/sha256d.cpp:236]   --->   Operation 241 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 62)> <Delay = 0.00>
+ST_2 : Operation 242 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 242 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 62)> <Delay = 0.00>
+ST_2 : Operation 243 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_141" [sha256d/sha256d.cpp:236]   --->   Operation 243 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 61)> <Delay = 0.00>
+ST_2 : Operation 244 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 244 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 61)> <Delay = 0.00>
+ST_2 : Operation 245 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_140" [sha256d/sha256d.cpp:236]   --->   Operation 245 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 60)> <Delay = 0.00>
+ST_2 : Operation 246 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 246 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 60)> <Delay = 0.00>
+ST_2 : Operation 247 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_139" [sha256d/sha256d.cpp:236]   --->   Operation 247 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 59)> <Delay = 0.00>
+ST_2 : Operation 248 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 248 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 59)> <Delay = 0.00>
+ST_2 : Operation 249 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_138" [sha256d/sha256d.cpp:236]   --->   Operation 249 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 58)> <Delay = 0.00>
+ST_2 : Operation 250 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 250 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 58)> <Delay = 0.00>
+ST_2 : Operation 251 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_137" [sha256d/sha256d.cpp:236]   --->   Operation 251 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 57)> <Delay = 0.00>
+ST_2 : Operation 252 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 252 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 57)> <Delay = 0.00>
+ST_2 : Operation 253 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_136" [sha256d/sha256d.cpp:236]   --->   Operation 253 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 56)> <Delay = 0.00>
+ST_2 : Operation 254 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 254 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 56)> <Delay = 0.00>
+ST_2 : Operation 255 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_135" [sha256d/sha256d.cpp:236]   --->   Operation 255 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 55)> <Delay = 0.00>
+ST_2 : Operation 256 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 256 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 55)> <Delay = 0.00>
+ST_2 : Operation 257 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_134" [sha256d/sha256d.cpp:236]   --->   Operation 257 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 54)> <Delay = 0.00>
+ST_2 : Operation 258 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 258 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 54)> <Delay = 0.00>
+ST_2 : Operation 259 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_133" [sha256d/sha256d.cpp:236]   --->   Operation 259 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 53)> <Delay = 0.00>
+ST_2 : Operation 260 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 260 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 53)> <Delay = 0.00>
+ST_2 : Operation 261 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_132" [sha256d/sha256d.cpp:236]   --->   Operation 261 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 52)> <Delay = 0.00>
+ST_2 : Operation 262 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 262 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 52)> <Delay = 0.00>
+ST_2 : Operation 263 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_131" [sha256d/sha256d.cpp:236]   --->   Operation 263 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 51)> <Delay = 0.00>
+ST_2 : Operation 264 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 264 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 51)> <Delay = 0.00>
+ST_2 : Operation 265 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_130" [sha256d/sha256d.cpp:236]   --->   Operation 265 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 50)> <Delay = 0.00>
+ST_2 : Operation 266 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 266 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 50)> <Delay = 0.00>
+ST_2 : Operation 267 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_129" [sha256d/sha256d.cpp:236]   --->   Operation 267 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 49)> <Delay = 0.00>
+ST_2 : Operation 268 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 268 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 49)> <Delay = 0.00>
+ST_2 : Operation 269 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_128" [sha256d/sha256d.cpp:236]   --->   Operation 269 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 48)> <Delay = 0.00>
+ST_2 : Operation 270 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 270 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 48)> <Delay = 0.00>
+ST_2 : Operation 271 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_127" [sha256d/sha256d.cpp:236]   --->   Operation 271 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 47)> <Delay = 0.00>
+ST_2 : Operation 272 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 272 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 47)> <Delay = 0.00>
+ST_2 : Operation 273 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_126" [sha256d/sha256d.cpp:236]   --->   Operation 273 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 46)> <Delay = 0.00>
+ST_2 : Operation 274 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 274 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 46)> <Delay = 0.00>
+ST_2 : Operation 275 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_125" [sha256d/sha256d.cpp:236]   --->   Operation 275 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 45)> <Delay = 0.00>
+ST_2 : Operation 276 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 276 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 45)> <Delay = 0.00>
+ST_2 : Operation 277 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_124" [sha256d/sha256d.cpp:236]   --->   Operation 277 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 44)> <Delay = 0.00>
+ST_2 : Operation 278 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 278 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 44)> <Delay = 0.00>
+ST_2 : Operation 279 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_123" [sha256d/sha256d.cpp:236]   --->   Operation 279 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 43)> <Delay = 0.00>
+ST_2 : Operation 280 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 280 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 43)> <Delay = 0.00>
+ST_2 : Operation 281 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_122" [sha256d/sha256d.cpp:236]   --->   Operation 281 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 42)> <Delay = 0.00>
+ST_2 : Operation 282 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 282 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 42)> <Delay = 0.00>
+ST_2 : Operation 283 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_121" [sha256d/sha256d.cpp:236]   --->   Operation 283 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 41)> <Delay = 0.00>
+ST_2 : Operation 284 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 284 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 41)> <Delay = 0.00>
+ST_2 : Operation 285 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_120" [sha256d/sha256d.cpp:236]   --->   Operation 285 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 40)> <Delay = 0.00>
+ST_2 : Operation 286 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 286 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 40)> <Delay = 0.00>
+ST_2 : Operation 287 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_119" [sha256d/sha256d.cpp:236]   --->   Operation 287 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 39)> <Delay = 0.00>
+ST_2 : Operation 288 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 288 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 39)> <Delay = 0.00>
+ST_2 : Operation 289 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_118" [sha256d/sha256d.cpp:236]   --->   Operation 289 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 38)> <Delay = 0.00>
+ST_2 : Operation 290 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 290 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 38)> <Delay = 0.00>
+ST_2 : Operation 291 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_117" [sha256d/sha256d.cpp:236]   --->   Operation 291 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 37)> <Delay = 0.00>
+ST_2 : Operation 292 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 292 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 37)> <Delay = 0.00>
+ST_2 : Operation 293 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_116" [sha256d/sha256d.cpp:236]   --->   Operation 293 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 36)> <Delay = 0.00>
+ST_2 : Operation 294 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 294 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 36)> <Delay = 0.00>
+ST_2 : Operation 295 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_115" [sha256d/sha256d.cpp:236]   --->   Operation 295 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 35)> <Delay = 0.00>
+ST_2 : Operation 296 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 296 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 35)> <Delay = 0.00>
+ST_2 : Operation 297 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_114" [sha256d/sha256d.cpp:236]   --->   Operation 297 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 34)> <Delay = 0.00>
+ST_2 : Operation 298 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 298 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 34)> <Delay = 0.00>
+ST_2 : Operation 299 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_113" [sha256d/sha256d.cpp:236]   --->   Operation 299 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 33)> <Delay = 0.00>
+ST_2 : Operation 300 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 300 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 33)> <Delay = 0.00>
+ST_2 : Operation 301 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_112" [sha256d/sha256d.cpp:236]   --->   Operation 301 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 32)> <Delay = 0.00>
+ST_2 : Operation 302 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 302 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 32)> <Delay = 0.00>
+ST_2 : Operation 303 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_111" [sha256d/sha256d.cpp:236]   --->   Operation 303 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 31)> <Delay = 0.00>
+ST_2 : Operation 304 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 304 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 31)> <Delay = 0.00>
+ST_2 : Operation 305 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_110" [sha256d/sha256d.cpp:236]   --->   Operation 305 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 30)> <Delay = 0.00>
+ST_2 : Operation 306 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 306 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 30)> <Delay = 0.00>
+ST_2 : Operation 307 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_109" [sha256d/sha256d.cpp:236]   --->   Operation 307 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 29)> <Delay = 0.00>
+ST_2 : Operation 308 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 308 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 29)> <Delay = 0.00>
+ST_2 : Operation 309 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_108" [sha256d/sha256d.cpp:236]   --->   Operation 309 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 28)> <Delay = 0.00>
+ST_2 : Operation 310 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 310 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 28)> <Delay = 0.00>
+ST_2 : Operation 311 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_107" [sha256d/sha256d.cpp:236]   --->   Operation 311 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 27)> <Delay = 0.00>
+ST_2 : Operation 312 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 312 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 27)> <Delay = 0.00>
+ST_2 : Operation 313 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_106" [sha256d/sha256d.cpp:236]   --->   Operation 313 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 26)> <Delay = 0.00>
+ST_2 : Operation 314 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 314 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 26)> <Delay = 0.00>
+ST_2 : Operation 315 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_105" [sha256d/sha256d.cpp:236]   --->   Operation 315 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 25)> <Delay = 0.00>
+ST_2 : Operation 316 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 316 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 25)> <Delay = 0.00>
+ST_2 : Operation 317 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_104" [sha256d/sha256d.cpp:236]   --->   Operation 317 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 24)> <Delay = 0.00>
+ST_2 : Operation 318 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 318 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 24)> <Delay = 0.00>
+ST_2 : Operation 319 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_103" [sha256d/sha256d.cpp:236]   --->   Operation 319 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 23)> <Delay = 0.00>
+ST_2 : Operation 320 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 320 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 23)> <Delay = 0.00>
+ST_2 : Operation 321 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_102" [sha256d/sha256d.cpp:236]   --->   Operation 321 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 22)> <Delay = 0.00>
+ST_2 : Operation 322 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 322 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 22)> <Delay = 0.00>
+ST_2 : Operation 323 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_101" [sha256d/sha256d.cpp:236]   --->   Operation 323 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 21)> <Delay = 0.00>
+ST_2 : Operation 324 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 324 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 21)> <Delay = 0.00>
+ST_2 : Operation 325 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_100" [sha256d/sha256d.cpp:236]   --->   Operation 325 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 20)> <Delay = 0.00>
+ST_2 : Operation 326 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 326 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 20)> <Delay = 0.00>
+ST_2 : Operation 327 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_99" [sha256d/sha256d.cpp:236]   --->   Operation 327 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 19)> <Delay = 0.00>
+ST_2 : Operation 328 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 328 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 19)> <Delay = 0.00>
+ST_2 : Operation 329 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_98" [sha256d/sha256d.cpp:236]   --->   Operation 329 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 18)> <Delay = 0.00>
+ST_2 : Operation 330 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 330 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 18)> <Delay = 0.00>
+ST_2 : Operation 331 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_97" [sha256d/sha256d.cpp:236]   --->   Operation 331 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 17)> <Delay = 0.00>
+ST_2 : Operation 332 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 332 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 17)> <Delay = 0.00>
+ST_2 : Operation 333 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63" [sha256d/sha256d.cpp:236]   --->   Operation 333 'store' <Predicate = (!exitcond & !icmp & tmp_82 == 16)> <Delay = 0.00>
+ST_2 : Operation 334 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 334 'br' <Predicate = (!exitcond & !icmp & tmp_82 == 16)> <Delay = 0.00>
+ST_2 : Operation 335 [1/1] (0.00ns)   --->   "store i32 %W_16, i32* %W_63_143" [sha256d/sha256d.cpp:236]   --->   Operation 335 'store' <Predicate = (!exitcond & !icmp & tmp_82 != 16 & tmp_82 != 17 & tmp_82 != 18 & tmp_82 != 19 & tmp_82 != 20 & tmp_82 != 21 & tmp_82 != 22 & tmp_82 != 23 & tmp_82 != 24 & tmp_82 != 25 & tmp_82 != 26 & tmp_82 != 27 & tmp_82 != 28 & tmp_82 != 29 & tmp_82 != 30 & tmp_82 != 31 & tmp_82 != 32 & tmp_82 != 33 & tmp_82 != 34 & tmp_82 != 35 & tmp_82 != 36 & tmp_82 != 37 & tmp_82 != 38 & tmp_82 != 39 & tmp_82 != 40 & tmp_82 != 41 & tmp_82 != 42 & tmp_82 != 43 & tmp_82 != 44 & tmp_82 != 45 & tmp_82 != 46 & tmp_82 != 47 & tmp_82 != 48 & tmp_82 != 49 & tmp_82 != 50 & tmp_82 != 51 & tmp_82 != 52 & tmp_82 != 53 & tmp_82 != 54 & tmp_82 != 55 & tmp_82 != 56 & tmp_82 != 57 & tmp_82 != 58 & tmp_82 != 59 & tmp_82 != 60 & tmp_82 != 61 & tmp_82 != 62)> <Delay = 0.00>
+ST_2 : Operation 336 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:236]   --->   Operation 336 'br' <Predicate = (!exitcond & !icmp & tmp_82 != 16 & tmp_82 != 17 & tmp_82 != 18 & tmp_82 != 19 & tmp_82 != 20 & tmp_82 != 21 & tmp_82 != 22 & tmp_82 != 23 & tmp_82 != 24 & tmp_82 != 25 & tmp_82 != 26 & tmp_82 != 27 & tmp_82 != 28 & tmp_82 != 29 & tmp_82 != 30 & tmp_82 != 31 & tmp_82 != 32 & tmp_82 != 33 & tmp_82 != 34 & tmp_82 != 35 & tmp_82 != 36 & tmp_82 != 37 & tmp_82 != 38 & tmp_82 != 39 & tmp_82 != 40 & tmp_82 != 41 & tmp_82 != 42 & tmp_82 != 43 & tmp_82 != 44 & tmp_82 != 45 & tmp_82 != 46 & tmp_82 != 47 & tmp_82 != 48 & tmp_82 != 49 & tmp_82 != 50 & tmp_82 != 51 & tmp_82 != 52 & tmp_82 != 53 & tmp_82 != 54 & tmp_82 != 55 & tmp_82 != 56 & tmp_82 != 57 & tmp_82 != 58 & tmp_82 != 59 & tmp_82 != 60 & tmp_82 != 61 & tmp_82 != 62)> <Delay = 0.00>
+ST_2 : Operation 337 [1/1] (0.00ns)   --->   "%tmp_79 = trunc i7 %i to i4" [sha256d/sha256d.cpp:232]   --->   Operation 337 'trunc' 'tmp_79' <Predicate = (!exitcond & icmp)> <Delay = 0.00>
+ST_2 : Operation 338 [1/1] (1.67ns)   --->   "%W_0 = call i32 @_ssdm_op_Mux.ap_auto.16i32.i4(i32 %block_0_read_3, i32 %block_1_read_3, i32 %block_2_read_2, i32 %block_3_read_3, i32 %block_4_read_3, i32 %block_5_read_3, i32 %block_6_read_3, i32 %block_7_read_3, i32 %block_8_read_2, i32 %block_9_read_2, i32 %block_10_read11, i32 %block_11_read_2, i32 %block_12_read_2, i32 %block_13_read_2, i32 %block_14_read_2, i32 %block_15_read_2, i4 %tmp_79)" [sha256d/sha256d.cpp:232]   --->   Operation 338 'mux' 'W_0' <Predicate = (!exitcond & icmp)> <Delay = 1.67> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 339 [1/1] (0.00ns)   --->   "%tmp_80 = trunc i7 %i to i6" [sha256d/sha256d.cpp:232]   --->   Operation 339 'trunc' 'tmp_80' <Predicate = (!exitcond & icmp)> <Delay = 0.00>
+ST_2 : Operation 340 [1/1] (1.07ns)   --->   "switch i6 %tmp_80, label %branch335 [
+    i6 0, label %.branch16_crit_edge
+    i6 1, label %branch321
+    i6 2, label %branch322
+    i6 3, label %branch323
+    i6 4, label %branch324
+    i6 5, label %branch325
+    i6 6, label %branch326
+    i6 7, label %branch327
+    i6 8, label %branch328
+    i6 9, label %branch329
+    i6 10, label %branch330
+    i6 11, label %branch331
+    i6 12, label %branch332
+    i6 13, label %branch333
+    i6 14, label %branch334
+  ]" [sha256d/sha256d.cpp:232]   --->   Operation 340 'switch' <Predicate = (!exitcond & icmp)> <Delay = 1.07>
+ST_2 : Operation 341 [1/1] (0.00ns)   --->   "store i32 %W_0, i32* %W_15" [sha256d/sha256d.cpp:232]   --->   Operation 341 'store' <Predicate = (!exitcond & icmp & tmp_80 == 14)> <Delay = 0.00>
+ST_2 : Operation 342 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:232]   --->   Operation 342 'br' <Predicate = (!exitcond & icmp & tmp_80 == 14)> <Delay = 0.00>
+ST_2 : Operation 343 [1/1] (0.00ns)   --->   "store i32 %W_0, i32* %W_15_47" [sha256d/sha256d.cpp:232]   --->   Operation 343 'store' <Predicate = (!exitcond & icmp & tmp_80 == 13)> <Delay = 0.00>
+ST_2 : Operation 344 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:232]   --->   Operation 344 'br' <Predicate = (!exitcond & icmp & tmp_80 == 13)> <Delay = 0.00>
+ST_2 : Operation 345 [1/1] (0.00ns)   --->   "store i32 %W_0, i32* %W_15_46" [sha256d/sha256d.cpp:232]   --->   Operation 345 'store' <Predicate = (!exitcond & icmp & tmp_80 == 12)> <Delay = 0.00>
+ST_2 : Operation 346 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:232]   --->   Operation 346 'br' <Predicate = (!exitcond & icmp & tmp_80 == 12)> <Delay = 0.00>
+ST_2 : Operation 347 [1/1] (0.00ns)   --->   "store i32 %W_0, i32* %W_15_45" [sha256d/sha256d.cpp:232]   --->   Operation 347 'store' <Predicate = (!exitcond & icmp & tmp_80 == 11)> <Delay = 0.00>
+ST_2 : Operation 348 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:232]   --->   Operation 348 'br' <Predicate = (!exitcond & icmp & tmp_80 == 11)> <Delay = 0.00>
+ST_2 : Operation 349 [1/1] (0.00ns)   --->   "store i32 %W_0, i32* %W_15_44" [sha256d/sha256d.cpp:232]   --->   Operation 349 'store' <Predicate = (!exitcond & icmp & tmp_80 == 10)> <Delay = 0.00>
+ST_2 : Operation 350 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:232]   --->   Operation 350 'br' <Predicate = (!exitcond & icmp & tmp_80 == 10)> <Delay = 0.00>
+ST_2 : Operation 351 [1/1] (0.00ns)   --->   "store i32 %W_0, i32* %W_15_43" [sha256d/sha256d.cpp:232]   --->   Operation 351 'store' <Predicate = (!exitcond & icmp & tmp_80 == 9)> <Delay = 0.00>
+ST_2 : Operation 352 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:232]   --->   Operation 352 'br' <Predicate = (!exitcond & icmp & tmp_80 == 9)> <Delay = 0.00>
+ST_2 : Operation 353 [1/1] (0.00ns)   --->   "store i32 %W_0, i32* %W_15_42" [sha256d/sha256d.cpp:232]   --->   Operation 353 'store' <Predicate = (!exitcond & icmp & tmp_80 == 8)> <Delay = 0.00>
+ST_2 : Operation 354 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:232]   --->   Operation 354 'br' <Predicate = (!exitcond & icmp & tmp_80 == 8)> <Delay = 0.00>
+ST_2 : Operation 355 [1/1] (0.00ns)   --->   "store i32 %W_0, i32* %W_15_41" [sha256d/sha256d.cpp:232]   --->   Operation 355 'store' <Predicate = (!exitcond & icmp & tmp_80 == 7)> <Delay = 0.00>
+ST_2 : Operation 356 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:232]   --->   Operation 356 'br' <Predicate = (!exitcond & icmp & tmp_80 == 7)> <Delay = 0.00>
+ST_2 : Operation 357 [1/1] (0.00ns)   --->   "store i32 %W_0, i32* %W_15_40" [sha256d/sha256d.cpp:232]   --->   Operation 357 'store' <Predicate = (!exitcond & icmp & tmp_80 == 6)> <Delay = 0.00>
+ST_2 : Operation 358 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:232]   --->   Operation 358 'br' <Predicate = (!exitcond & icmp & tmp_80 == 6)> <Delay = 0.00>
+ST_2 : Operation 359 [1/1] (0.00ns)   --->   "store i32 %W_0, i32* %W_15_39" [sha256d/sha256d.cpp:232]   --->   Operation 359 'store' <Predicate = (!exitcond & icmp & tmp_80 == 5)> <Delay = 0.00>
+ST_2 : Operation 360 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:232]   --->   Operation 360 'br' <Predicate = (!exitcond & icmp & tmp_80 == 5)> <Delay = 0.00>
+ST_2 : Operation 361 [1/1] (0.00ns)   --->   "store i32 %W_0, i32* %W_15_38" [sha256d/sha256d.cpp:232]   --->   Operation 361 'store' <Predicate = (!exitcond & icmp & tmp_80 == 4)> <Delay = 0.00>
+ST_2 : Operation 362 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:232]   --->   Operation 362 'br' <Predicate = (!exitcond & icmp & tmp_80 == 4)> <Delay = 0.00>
+ST_2 : Operation 363 [1/1] (0.00ns)   --->   "store i32 %W_0, i32* %W_15_37" [sha256d/sha256d.cpp:232]   --->   Operation 363 'store' <Predicate = (!exitcond & icmp & tmp_80 == 3)> <Delay = 0.00>
+ST_2 : Operation 364 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:232]   --->   Operation 364 'br' <Predicate = (!exitcond & icmp & tmp_80 == 3)> <Delay = 0.00>
+ST_2 : Operation 365 [1/1] (0.00ns)   --->   "store i32 %W_0, i32* %W_15_36" [sha256d/sha256d.cpp:232]   --->   Operation 365 'store' <Predicate = (!exitcond & icmp & tmp_80 == 2)> <Delay = 0.00>
+ST_2 : Operation 366 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:232]   --->   Operation 366 'br' <Predicate = (!exitcond & icmp & tmp_80 == 2)> <Delay = 0.00>
+ST_2 : Operation 367 [1/1] (0.00ns)   --->   "store i32 %W_0, i32* %W_15_35" [sha256d/sha256d.cpp:232]   --->   Operation 367 'store' <Predicate = (!exitcond & icmp & tmp_80 == 1)> <Delay = 0.00>
+ST_2 : Operation 368 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:232]   --->   Operation 368 'br' <Predicate = (!exitcond & icmp & tmp_80 == 1)> <Delay = 0.00>
+ST_2 : Operation 369 [1/1] (0.00ns)   --->   "store i32 %W_0, i32* %W_15_34" [sha256d/sha256d.cpp:232]   --->   Operation 369 'store' <Predicate = (!exitcond & icmp & tmp_80 == 0)> <Delay = 0.00>
+ST_2 : Operation 370 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:232]   --->   Operation 370 'br' <Predicate = (!exitcond & icmp & tmp_80 == 0)> <Delay = 0.00>
+ST_2 : Operation 371 [1/1] (0.00ns)   --->   "store i32 %W_0, i32* %W_15_33" [sha256d/sha256d.cpp:232]   --->   Operation 371 'store' <Predicate = (!exitcond & icmp & tmp_80 != 0 & tmp_80 != 1 & tmp_80 != 2 & tmp_80 != 3 & tmp_80 != 4 & tmp_80 != 5 & tmp_80 != 6 & tmp_80 != 7 & tmp_80 != 8 & tmp_80 != 9 & tmp_80 != 10 & tmp_80 != 11 & tmp_80 != 12 & tmp_80 != 13 & tmp_80 != 14)> <Delay = 0.00>
+ST_2 : Operation 372 [1/1] (0.00ns)   --->   "br label %branch16" [sha256d/sha256d.cpp:232]   --->   Operation 372 'br' <Predicate = (!exitcond & icmp & tmp_80 != 0 & tmp_80 != 1 & tmp_80 != 2 & tmp_80 != 3 & tmp_80 != 4 & tmp_80 != 5 & tmp_80 != 6 & tmp_80 != 7 & tmp_80 != 8 & tmp_80 != 9 & tmp_80 != 10 & tmp_80 != 11 & tmp_80 != 12 & tmp_80 != 13 & tmp_80 != 14)> <Delay = 0.00>
+ST_2 : Operation 373 [1/1] (1.89ns)   --->   "%out_state_0_write_a = add i32 %b, 1779033703" [sha256d/sha256d.cpp:261]   --->   Operation 373 'add' 'out_state_0_write_a' <Predicate = (exitcond)> <Delay = 1.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 374 [1/1] (1.89ns)   --->   "%out_state_1_write_a = add i32 %c, -1150833019" [sha256d/sha256d.cpp:262]   --->   Operation 374 'add' 'out_state_1_write_a' <Predicate = (exitcond)> <Delay = 1.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 375 [1/1] (1.89ns)   --->   "%out_state_2_write_a = add i32 %d, 1013904242" [sha256d/sha256d.cpp:263]   --->   Operation 375 'add' 'out_state_2_write_a' <Predicate = (exitcond)> <Delay = 1.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 376 [1/1] (1.89ns)   --->   "%out_state_3_write_a = add i32 %d1, -1521486534" [sha256d/sha256d.cpp:264]   --->   Operation 376 'add' 'out_state_3_write_a' <Predicate = (exitcond)> <Delay = 1.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 377 [1/1] (1.89ns)   --->   "%out_state_4_write_a = add i32 %f, 1359893119" [sha256d/sha256d.cpp:265]   --->   Operation 377 'add' 'out_state_4_write_a' <Predicate = (exitcond)> <Delay = 1.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 378 [1/1] (1.89ns)   --->   "%out_state_5_write_a = add i32 %g, -1694144372" [sha256d/sha256d.cpp:266]   --->   Operation 378 'add' 'out_state_5_write_a' <Predicate = (exitcond)> <Delay = 1.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 379 [1/1] (1.89ns)   --->   "%out_state_6_write_a = add i32 %h, 528734635" [sha256d/sha256d.cpp:267]   --->   Operation 379 'add' 'out_state_6_write_a' <Predicate = (exitcond)> <Delay = 1.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 380 [1/1] (1.89ns)   --->   "%out_state_7_write_a = add i32 %h1, 1541459225" [sha256d/sha256d.cpp:268]   --->   Operation 380 'add' 'out_state_7_write_a' <Predicate = (exitcond)> <Delay = 1.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 381 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32 } undef, i32 %out_state_0_write_a, 0" [sha256d/sha256d.cpp:261]   --->   Operation 381 'insertvalue' 'mrv' <Predicate = (exitcond)> <Delay = 0.00>
+ST_2 : Operation 382 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %mrv, i32 %out_state_1_write_a, 1" [sha256d/sha256d.cpp:261]   --->   Operation 382 'insertvalue' 'mrv_1' <Predicate = (exitcond)> <Delay = 0.00>
+ST_2 : Operation 383 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_1, i32 %out_state_2_write_a, 2" [sha256d/sha256d.cpp:261]   --->   Operation 383 'insertvalue' 'mrv_2' <Predicate = (exitcond)> <Delay = 0.00>
+ST_2 : Operation 384 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_2, i32 %out_state_3_write_a, 3" [sha256d/sha256d.cpp:261]   --->   Operation 384 'insertvalue' 'mrv_3' <Predicate = (exitcond)> <Delay = 0.00>
+ST_2 : Operation 385 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_3, i32 %out_state_4_write_a, 4" [sha256d/sha256d.cpp:261]   --->   Operation 385 'insertvalue' 'mrv_4' <Predicate = (exitcond)> <Delay = 0.00>
+ST_2 : Operation 386 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_4, i32 %out_state_5_write_a, 5" [sha256d/sha256d.cpp:261]   --->   Operation 386 'insertvalue' 'mrv_5' <Predicate = (exitcond)> <Delay = 0.00>
+ST_2 : Operation 387 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_5, i32 %out_state_6_write_a, 6" [sha256d/sha256d.cpp:261]   --->   Operation 387 'insertvalue' 'mrv_6' <Predicate = (exitcond)> <Delay = 0.00>
+ST_2 : Operation 388 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_6, i32 %out_state_7_write_a, 7" [sha256d/sha256d.cpp:261]   --->   Operation 388 'insertvalue' 'mrv_7' <Predicate = (exitcond)> <Delay = 0.00>
+ST_2 : Operation 389 [1/1] (0.00ns)   --->   "ret { i32, i32, i32, i32, i32, i32, i32, i32 } %mrv_7" [sha256d/sha256d.cpp:261]   --->   Operation 389 'ret' <Predicate = (exitcond)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 6.11>
+ST_3 : Operation 390 [1/1] (0.00ns)   --->   "%W_15_load_3 = load i32* %W_15" [sha256d/sha256d.cpp:240]   --->   Operation 390 'load' 'W_15_load_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 391 [1/1] (0.00ns)   --->   "%W_15_33_load_1 = load i32* %W_15_33" [sha256d/sha256d.cpp:240]   --->   Operation 391 'load' 'W_15_33_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 392 [1/1] (0.00ns)   --->   "%W_63_load_3 = load i32* %W_63" [sha256d/sha256d.cpp:240]   --->   Operation 392 'load' 'W_63_load_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 393 [1/1] (0.00ns)   --->   "%W_63_97_load_1 = load i32* %W_63_97" [sha256d/sha256d.cpp:240]   --->   Operation 393 'load' 'W_63_97_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 394 [1/1] (0.00ns)   --->   "%W_63_98_load_1 = load i32* %W_63_98" [sha256d/sha256d.cpp:240]   --->   Operation 394 'load' 'W_63_98_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 395 [1/1] (0.00ns)   --->   "%W_63_99_load_1 = load i32* %W_63_99" [sha256d/sha256d.cpp:240]   --->   Operation 395 'load' 'W_63_99_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 396 [1/1] (0.00ns)   --->   "%W_63_100_load_1 = load i32* %W_63_100" [sha256d/sha256d.cpp:240]   --->   Operation 396 'load' 'W_63_100_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 397 [1/1] (0.00ns)   --->   "%W_63_101_load_1 = load i32* %W_63_101" [sha256d/sha256d.cpp:240]   --->   Operation 397 'load' 'W_63_101_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 398 [1/1] (0.00ns)   --->   "%W_63_102_load_1 = load i32* %W_63_102" [sha256d/sha256d.cpp:240]   --->   Operation 398 'load' 'W_63_102_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 399 [1/1] (0.00ns)   --->   "%W_63_103_load_1 = load i32* %W_63_103" [sha256d/sha256d.cpp:240]   --->   Operation 399 'load' 'W_63_103_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 400 [1/1] (0.00ns)   --->   "%W_63_104_load_1 = load i32* %W_63_104" [sha256d/sha256d.cpp:240]   --->   Operation 400 'load' 'W_63_104_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 401 [1/1] (0.00ns)   --->   "%W_63_105_load_1 = load i32* %W_63_105" [sha256d/sha256d.cpp:240]   --->   Operation 401 'load' 'W_63_105_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 402 [1/1] (0.00ns)   --->   "%W_63_106_load_1 = load i32* %W_63_106" [sha256d/sha256d.cpp:240]   --->   Operation 402 'load' 'W_63_106_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 403 [1/1] (0.00ns)   --->   "%W_63_107_load_1 = load i32* %W_63_107" [sha256d/sha256d.cpp:240]   --->   Operation 403 'load' 'W_63_107_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 404 [1/1] (0.00ns)   --->   "%W_63_108_load_1 = load i32* %W_63_108" [sha256d/sha256d.cpp:240]   --->   Operation 404 'load' 'W_63_108_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 405 [1/1] (0.00ns)   --->   "%W_63_109_load_1 = load i32* %W_63_109" [sha256d/sha256d.cpp:240]   --->   Operation 405 'load' 'W_63_109_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 406 [1/1] (0.00ns)   --->   "%W_63_110_load_1 = load i32* %W_63_110" [sha256d/sha256d.cpp:240]   --->   Operation 406 'load' 'W_63_110_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 407 [1/1] (0.00ns)   --->   "%W_63_111_load_1 = load i32* %W_63_111" [sha256d/sha256d.cpp:240]   --->   Operation 407 'load' 'W_63_111_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 408 [1/1] (0.00ns)   --->   "%W_63_112_load_1 = load i32* %W_63_112" [sha256d/sha256d.cpp:240]   --->   Operation 408 'load' 'W_63_112_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 409 [1/1] (0.00ns)   --->   "%W_63_113_load_1 = load i32* %W_63_113" [sha256d/sha256d.cpp:240]   --->   Operation 409 'load' 'W_63_113_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 410 [1/1] (0.00ns)   --->   "%W_63_114_load_1 = load i32* %W_63_114" [sha256d/sha256d.cpp:240]   --->   Operation 410 'load' 'W_63_114_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 411 [1/1] (0.00ns)   --->   "%W_63_115_load_1 = load i32* %W_63_115" [sha256d/sha256d.cpp:240]   --->   Operation 411 'load' 'W_63_115_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 412 [1/1] (0.00ns)   --->   "%W_63_116_load_1 = load i32* %W_63_116" [sha256d/sha256d.cpp:240]   --->   Operation 412 'load' 'W_63_116_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 413 [1/1] (0.00ns)   --->   "%W_63_117_load_1 = load i32* %W_63_117" [sha256d/sha256d.cpp:240]   --->   Operation 413 'load' 'W_63_117_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 414 [1/1] (0.00ns)   --->   "%W_63_118_load_1 = load i32* %W_63_118" [sha256d/sha256d.cpp:240]   --->   Operation 414 'load' 'W_63_118_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 415 [1/1] (0.00ns)   --->   "%W_63_119_load_1 = load i32* %W_63_119" [sha256d/sha256d.cpp:240]   --->   Operation 415 'load' 'W_63_119_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 416 [1/1] (0.00ns)   --->   "%W_63_120_load_1 = load i32* %W_63_120" [sha256d/sha256d.cpp:240]   --->   Operation 416 'load' 'W_63_120_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 417 [1/1] (0.00ns)   --->   "%W_63_121_load_1 = load i32* %W_63_121" [sha256d/sha256d.cpp:240]   --->   Operation 417 'load' 'W_63_121_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 418 [1/1] (0.00ns)   --->   "%W_63_122_load_1 = load i32* %W_63_122" [sha256d/sha256d.cpp:240]   --->   Operation 418 'load' 'W_63_122_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 419 [1/1] (0.00ns)   --->   "%W_63_123_load_1 = load i32* %W_63_123" [sha256d/sha256d.cpp:240]   --->   Operation 419 'load' 'W_63_123_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 420 [1/1] (0.00ns)   --->   "%W_63_124_load_1 = load i32* %W_63_124" [sha256d/sha256d.cpp:240]   --->   Operation 420 'load' 'W_63_124_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 421 [1/1] (0.00ns)   --->   "%W_63_125_load_1 = load i32* %W_63_125" [sha256d/sha256d.cpp:240]   --->   Operation 421 'load' 'W_63_125_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 422 [1/1] (0.00ns)   --->   "%W_63_126_load_1 = load i32* %W_63_126" [sha256d/sha256d.cpp:240]   --->   Operation 422 'load' 'W_63_126_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 423 [1/1] (0.00ns)   --->   "%W_63_127_load_1 = load i32* %W_63_127" [sha256d/sha256d.cpp:240]   --->   Operation 423 'load' 'W_63_127_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 424 [1/1] (0.00ns)   --->   "%W_63_128_load_1 = load i32* %W_63_128" [sha256d/sha256d.cpp:240]   --->   Operation 424 'load' 'W_63_128_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 425 [1/1] (0.00ns)   --->   "%W_63_129_load_1 = load i32* %W_63_129" [sha256d/sha256d.cpp:240]   --->   Operation 425 'load' 'W_63_129_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 426 [1/1] (0.00ns)   --->   "%W_63_130_load_1 = load i32* %W_63_130" [sha256d/sha256d.cpp:240]   --->   Operation 426 'load' 'W_63_130_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 427 [1/1] (0.00ns)   --->   "%W_63_131_load_1 = load i32* %W_63_131" [sha256d/sha256d.cpp:240]   --->   Operation 427 'load' 'W_63_131_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 428 [1/1] (0.00ns)   --->   "%W_63_132_load_1 = load i32* %W_63_132" [sha256d/sha256d.cpp:240]   --->   Operation 428 'load' 'W_63_132_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 429 [1/1] (0.00ns)   --->   "%W_63_133_load_1 = load i32* %W_63_133" [sha256d/sha256d.cpp:240]   --->   Operation 429 'load' 'W_63_133_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 430 [1/1] (0.00ns)   --->   "%W_63_134_load_1 = load i32* %W_63_134" [sha256d/sha256d.cpp:240]   --->   Operation 430 'load' 'W_63_134_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 431 [1/1] (0.00ns)   --->   "%W_63_135_load_1 = load i32* %W_63_135" [sha256d/sha256d.cpp:240]   --->   Operation 431 'load' 'W_63_135_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 432 [1/1] (0.00ns)   --->   "%W_63_136_load_1 = load i32* %W_63_136" [sha256d/sha256d.cpp:240]   --->   Operation 432 'load' 'W_63_136_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 433 [1/1] (0.00ns)   --->   "%W_63_137_load_1 = load i32* %W_63_137" [sha256d/sha256d.cpp:240]   --->   Operation 433 'load' 'W_63_137_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 434 [1/1] (0.00ns)   --->   "%W_63_138_load_1 = load i32* %W_63_138" [sha256d/sha256d.cpp:240]   --->   Operation 434 'load' 'W_63_138_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 435 [1/1] (0.00ns)   --->   "%W_63_139_load_1 = load i32* %W_63_139" [sha256d/sha256d.cpp:240]   --->   Operation 435 'load' 'W_63_139_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 436 [1/1] (0.00ns)   --->   "%W_63_140_load_1 = load i32* %W_63_140" [sha256d/sha256d.cpp:240]   --->   Operation 436 'load' 'W_63_140_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 437 [1/1] (0.00ns)   --->   "%W_63_141_load_1 = load i32* %W_63_141" [sha256d/sha256d.cpp:240]   --->   Operation 437 'load' 'W_63_141_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 438 [1/1] (0.00ns)   --->   "%W_15_34_load_1 = load i32* %W_15_34" [sha256d/sha256d.cpp:240]   --->   Operation 438 'load' 'W_15_34_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 439 [1/1] (0.00ns)   --->   "%W_15_35_load_1 = load i32* %W_15_35" [sha256d/sha256d.cpp:240]   --->   Operation 439 'load' 'W_15_35_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 440 [1/1] (0.00ns)   --->   "%W_15_36_load_1 = load i32* %W_15_36" [sha256d/sha256d.cpp:240]   --->   Operation 440 'load' 'W_15_36_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 441 [1/1] (0.00ns)   --->   "%W_15_37_load_1 = load i32* %W_15_37" [sha256d/sha256d.cpp:240]   --->   Operation 441 'load' 'W_15_37_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 442 [1/1] (0.00ns)   --->   "%W_15_38_load_1 = load i32* %W_15_38" [sha256d/sha256d.cpp:240]   --->   Operation 442 'load' 'W_15_38_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 443 [1/1] (0.00ns)   --->   "%W_15_39_load_1 = load i32* %W_15_39" [sha256d/sha256d.cpp:240]   --->   Operation 443 'load' 'W_15_39_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 444 [1/1] (0.00ns)   --->   "%W_15_40_load_1 = load i32* %W_15_40" [sha256d/sha256d.cpp:240]   --->   Operation 444 'load' 'W_15_40_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 445 [1/1] (0.00ns)   --->   "%W_15_41_load_1 = load i32* %W_15_41" [sha256d/sha256d.cpp:240]   --->   Operation 445 'load' 'W_15_41_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 446 [1/1] (0.00ns)   --->   "%W_15_42_load_1 = load i32* %W_15_42" [sha256d/sha256d.cpp:240]   --->   Operation 446 'load' 'W_15_42_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 447 [1/1] (0.00ns)   --->   "%W_15_43_load_1 = load i32* %W_15_43" [sha256d/sha256d.cpp:240]   --->   Operation 447 'load' 'W_15_43_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 448 [1/1] (0.00ns)   --->   "%W_15_44_load_1 = load i32* %W_15_44" [sha256d/sha256d.cpp:240]   --->   Operation 448 'load' 'W_15_44_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 449 [1/1] (0.00ns)   --->   "%W_15_45_load_1 = load i32* %W_15_45" [sha256d/sha256d.cpp:240]   --->   Operation 449 'load' 'W_15_45_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 450 [1/1] (0.00ns)   --->   "%W_15_46_load_1 = load i32* %W_15_46" [sha256d/sha256d.cpp:240]   --->   Operation 450 'load' 'W_15_46_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 451 [1/1] (0.00ns)   --->   "%W_15_47_load_1 = load i32* %W_15_47" [sha256d/sha256d.cpp:240]   --->   Operation 451 'load' 'W_15_47_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 452 [1/1] (0.00ns)   --->   "%W_63_142_load = load i32* %W_63_142" [sha256d/sha256d.cpp:240]   --->   Operation 452 'load' 'W_63_142_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 453 [1/1] (0.00ns)   --->   "%W_63_143_load = load i32* %W_63_143" [sha256d/sha256d.cpp:240]   --->   Operation 453 'load' 'W_63_143_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 454 [1/1] (0.00ns) (grouped into LUT with out node tmp_50)   --->   "%tmp_40 = call i26 @_ssdm_op_PartSelect.i26.i32.i32.i32(i32 %f, i32 6, i32 31)" [sha256d/sha256d.cpp:240]   --->   Operation 454 'partselect' 'tmp_40' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 455 [1/1] (0.00ns) (grouped into LUT with out node tmp_50)   --->   "%tmp_87 = trunc i32 %f to i6" [sha256d/sha256d.cpp:246]   --->   Operation 455 'trunc' 'tmp_87' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 456 [1/1] (0.00ns) (grouped into LUT with out node tmp_50)   --->   "%tmp_42 = call i32 @_ssdm_op_BitConcatenate.i32.i6.i26(i6 %tmp_87, i26 %tmp_40)" [sha256d/sha256d.cpp:240]   --->   Operation 456 'bitconcatenate' 'tmp_42' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 457 [1/1] (0.00ns) (grouped into LUT with out node tmp_50)   --->   "%tmp_43 = call i21 @_ssdm_op_PartSelect.i21.i32.i32.i32(i32 %f, i32 11, i32 31)" [sha256d/sha256d.cpp:240]   --->   Operation 457 'partselect' 'tmp_43' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 458 [1/1] (0.00ns) (grouped into LUT with out node tmp_50)   --->   "%tmp_88 = trunc i32 %f to i11" [sha256d/sha256d.cpp:246]   --->   Operation 458 'trunc' 'tmp_88' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 459 [1/1] (0.00ns) (grouped into LUT with out node tmp_50)   --->   "%tmp_45 = call i32 @_ssdm_op_BitConcatenate.i32.i11.i21(i11 %tmp_88, i21 %tmp_43)" [sha256d/sha256d.cpp:240]   --->   Operation 459 'bitconcatenate' 'tmp_45' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 460 [1/1] (0.00ns) (grouped into LUT with out node tmp_50)   --->   "%tmp_46 = call i7 @_ssdm_op_PartSelect.i7.i32.i32.i32(i32 %f, i32 25, i32 31)" [sha256d/sha256d.cpp:240]   --->   Operation 460 'partselect' 'tmp_46' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 461 [1/1] (0.00ns) (grouped into LUT with out node tmp_50)   --->   "%tmp_89 = trunc i32 %f to i25" [sha256d/sha256d.cpp:246]   --->   Operation 461 'trunc' 'tmp_89' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 462 [1/1] (0.00ns) (grouped into LUT with out node tmp_50)   --->   "%tmp_48 = call i32 @_ssdm_op_BitConcatenate.i32.i25.i7(i25 %tmp_89, i7 %tmp_46)" [sha256d/sha256d.cpp:240]   --->   Operation 462 'bitconcatenate' 'tmp_48' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 463 [1/1] (0.00ns) (grouped into LUT with out node tmp_50)   --->   "%tmp21 = xor i32 %tmp_42, %tmp_45" [sha256d/sha256d.cpp:240]   --->   Operation 463 'xor' 'tmp21' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 464 [1/1] (0.80ns) (out node of the LUT)   --->   "%tmp_50 = xor i32 %tmp21, %tmp_48" [sha256d/sha256d.cpp:240]   --->   Operation 464 'xor' 'tmp_50' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 465 [1/1] (0.00ns) (grouped into LUT with out node tmp_53)   --->   "%tmp_51 = xor i32 %h, %g" [sha256d/sha256d.cpp:240]   --->   Operation 465 'xor' 'tmp_51' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 466 [1/1] (0.00ns) (grouped into LUT with out node tmp_53)   --->   "%tmp_52 = and i32 %tmp_51, %f" [sha256d/sha256d.cpp:240]   --->   Operation 466 'and' 'tmp_52' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 467 [1/1] (0.80ns) (out node of the LUT)   --->   "%tmp_53 = xor i32 %tmp_52, %h" [sha256d/sha256d.cpp:240]   --->   Operation 467 'xor' 'tmp_53' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 468 [1/1] (0.00ns)   --->   "%tmp_90 = trunc i7 %i to i6" [sha256d/sha256d.cpp:240]   --->   Operation 468 'trunc' 'tmp_90' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 469 [1/1] (2.53ns)   --->   "%tmp_36 = call i32 @_ssdm_op_Mux.ap_auto.64i32.i6(i32 1116352408, i32 1899447441, i32 -1245643825, i32 -373957723, i32 961987163, i32 1508970993, i32 -1841331548, i32 -1424204075, i32 -670586216, i32 310598401, i32 607225278, i32 1426881987, i32 1925078388, i32 -2132889090, i32 -1680079193, i32 -1046744716, i32 -459576895, i32 -272742522, i32 264347078, i32 604807628, i32 770255983, i32 1249150122, i32 1555081692, i32 1996064986, i32 -1740746414, i32 -1473132947, i32 -1341970488, i32 -1084653625, i32 -958395405, i32 -710438585, i32 113926993, i32 338241895, i32 666307205, i32 773529912, i32 1294757372, i32 1396182291, i32 1695183700, i32 1986661051, i32 -2117940946, i32 -1838011259, i32 -1564481375, i32 -1474664885, i32 -1035236496, i32 -949202525, i32 -778901479, i32 -694614492, i32 -200395387, i32 275423344, i32 430227734, i32 506948616, i32 659060556, i32 883997877, i32 958139571, i32 1322822218, i32 1537002063, i32 1747873779, i32 1955562222, i32 2024104815, i32 -2067236844, i32 -1933114872, i32 -1866530822, i32 -1538233109, i32 -1090935817, i32 -965641998, i6 %tmp_90)" [sha256d/sha256d.cpp:240]   --->   Operation 469 'mux' 'tmp_36' <Predicate = true> <Delay = 2.53> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 470 [1/1] (2.53ns)   --->   "%tmp_37 = call i32 @_ssdm_op_Mux.ap_auto.64i32.i6(i32 %W_15_34_load_1, i32 %W_15_35_load_1, i32 %W_15_36_load_1, i32 %W_15_37_load_1, i32 %W_15_38_load_1, i32 %W_15_39_load_1, i32 %W_15_40_load_1, i32 %W_15_41_load_1, i32 %W_15_42_load_1, i32 %W_15_43_load_1, i32 %W_15_44_load_1, i32 %W_15_45_load_1, i32 %W_15_46_load_1, i32 %W_15_47_load_1, i32 %W_15_load_3, i32 %W_15_33_load_1, i32 %W_63_load_3, i32 %W_63_97_load_1, i32 %W_63_98_load_1, i32 %W_63_99_load_1, i32 %W_63_100_load_1, i32 %W_63_101_load_1, i32 %W_63_102_load_1, i32 %W_63_103_load_1, i32 %W_63_104_load_1, i32 %W_63_105_load_1, i32 %W_63_106_load_1, i32 %W_63_107_load_1, i32 %W_63_108_load_1, i32 %W_63_109_load_1, i32 %W_63_110_load_1, i32 %W_63_111_load_1, i32 %W_63_112_load_1, i32 %W_63_113_load_1, i32 %W_63_114_load_1, i32 %W_63_115_load_1, i32 %W_63_116_load_1, i32 %W_63_117_load_1, i32 %W_63_118_load_1, i32 %W_63_119_load_1, i32 %W_63_120_load_1, i32 %W_63_121_load_1, i32 %W_63_122_load_1, i32 %W_63_123_load_1, i32 %W_63_124_load_1, i32 %W_63_125_load_1, i32 %W_63_126_load_1, i32 %W_63_127_load_1, i32 %W_63_128_load_1, i32 %W_63_129_load_1, i32 %W_63_130_load_1, i32 %W_63_131_load_1, i32 %W_63_132_load_1, i32 %W_63_133_load_1, i32 %W_63_134_load_1, i32 %W_63_135_load_1, i32 %W_63_136_load_1, i32 %W_63_137_load_1, i32 %W_63_138_load_1, i32 %W_63_139_load_1, i32 %W_63_140_load_1, i32 %W_63_141_load_1, i32 %W_63_142_load, i32 %W_63_143_load, i6 %tmp_90)" [sha256d/sha256d.cpp:240]   --->   Operation 470 'mux' 'tmp_37' <Predicate = true> <Delay = 2.53> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 471 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp26 = add i32 %h1, %tmp_37" [sha256d/sha256d.cpp:240]   --->   Operation 471 'add' 'tmp26' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.79> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 472 [1/1] (3.58ns) (root node of TernaryAdder)   --->   "%tmp25 = add i32 %tmp26, %tmp_50" [sha256d/sha256d.cpp:240]   --->   Operation 472 'add' 'tmp25' <Predicate = true> <Delay = 3.58> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.79> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 473 [1/1] (0.00ns) (grouped into LUT with out node tmp_s)   --->   "%tmp_69 = or i32 %d, %c" [sha256d/sha256d.cpp:241]   --->   Operation 473 'or' 'tmp_69' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 474 [1/1] (0.00ns) (grouped into LUT with out node tmp_s)   --->   "%tmp_70 = and i32 %tmp_69, %b" [sha256d/sha256d.cpp:241]   --->   Operation 474 'and' 'tmp_70' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 475 [1/1] (0.00ns) (grouped into LUT with out node tmp_s)   --->   "%tmp_71 = and i32 %d, %c" [sha256d/sha256d.cpp:241]   --->   Operation 475 'and' 'tmp_71' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 476 [1/1] (0.80ns) (out node of the LUT)   --->   "%tmp_s = or i32 %tmp_70, %tmp_71" [sha256d/sha256d.cpp:241]   --->   Operation 476 'or' 'tmp_s' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 7.17>
+ST_4 : Operation 477 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp24 = add i32 %tmp_53, %tmp_36" [sha256d/sha256d.cpp:240]   --->   Operation 477 'add' 'tmp24' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.79> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 478 [1/1] (3.58ns) (root node of TernaryAdder)   --->   "%t0 = add i32 %tmp25, %tmp24" [sha256d/sha256d.cpp:240]   --->   Operation 478 'add' 't0' <Predicate = true> <Delay = 3.58> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.79> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 479 [1/1] (0.00ns) (grouped into LUT with out node tmp_68)   --->   "%tmp_58 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %b, i32 2, i32 31)" [sha256d/sha256d.cpp:241]   --->   Operation 479 'partselect' 'tmp_58' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 480 [1/1] (0.00ns) (grouped into LUT with out node tmp_68)   --->   "%tmp_91 = trunc i32 %b to i2" [sha256d/sha256d.cpp:250]   --->   Operation 480 'trunc' 'tmp_91' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 481 [1/1] (0.00ns) (grouped into LUT with out node tmp_68)   --->   "%tmp_60 = call i32 @_ssdm_op_BitConcatenate.i32.i2.i30(i2 %tmp_91, i30 %tmp_58)" [sha256d/sha256d.cpp:241]   --->   Operation 481 'bitconcatenate' 'tmp_60' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 482 [1/1] (0.00ns) (grouped into LUT with out node tmp_68)   --->   "%tmp_61 = call i19 @_ssdm_op_PartSelect.i19.i32.i32.i32(i32 %b, i32 13, i32 31)" [sha256d/sha256d.cpp:241]   --->   Operation 482 'partselect' 'tmp_61' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 483 [1/1] (0.00ns) (grouped into LUT with out node tmp_68)   --->   "%tmp_92 = trunc i32 %b to i13" [sha256d/sha256d.cpp:250]   --->   Operation 483 'trunc' 'tmp_92' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 484 [1/1] (0.00ns) (grouped into LUT with out node tmp_68)   --->   "%tmp_63 = call i32 @_ssdm_op_BitConcatenate.i32.i13.i19(i13 %tmp_92, i19 %tmp_61)" [sha256d/sha256d.cpp:241]   --->   Operation 484 'bitconcatenate' 'tmp_63' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 485 [1/1] (0.00ns) (grouped into LUT with out node tmp_68)   --->   "%tmp_64 = call i10 @_ssdm_op_PartSelect.i10.i32.i32.i32(i32 %b, i32 22, i32 31)" [sha256d/sha256d.cpp:241]   --->   Operation 485 'partselect' 'tmp_64' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 486 [1/1] (0.00ns) (grouped into LUT with out node tmp_68)   --->   "%tmp_93 = trunc i32 %b to i22" [sha256d/sha256d.cpp:250]   --->   Operation 486 'trunc' 'tmp_93' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 487 [1/1] (0.00ns) (grouped into LUT with out node tmp_68)   --->   "%tmp_66 = call i32 @_ssdm_op_BitConcatenate.i32.i22.i10(i22 %tmp_93, i10 %tmp_64)" [sha256d/sha256d.cpp:241]   --->   Operation 487 'bitconcatenate' 'tmp_66' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 488 [1/1] (0.00ns) (grouped into LUT with out node tmp_68)   --->   "%tmp27 = xor i32 %tmp_60, %tmp_63" [sha256d/sha256d.cpp:241]   --->   Operation 488 'xor' 'tmp27' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 489 [1/1] (0.80ns) (out node of the LUT)   --->   "%tmp_68 = xor i32 %tmp27, %tmp_66" [sha256d/sha256d.cpp:241]   --->   Operation 489 'xor' 'tmp_68' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 490 [1/1] (1.89ns)   --->   "%e = add i32 %d1, %t0" [sha256d/sha256d.cpp:246]   --->   Operation 490 'add' 'e' <Predicate = true> <Delay = 1.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 491 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp28 = add i32 %tmp_s, %t0" [sha256d/sha256d.cpp:250]   --->   Operation 491 'add' 'tmp28' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.79> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 492 [1/1] (3.58ns) (root node of TernaryAdder)   --->   "%a = add i32 %tmp28, %tmp_68" [sha256d/sha256d.cpp:250]   --->   Operation 492 'add' 'a' <Predicate = true> <Delay = 3.58> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.79> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 493 [1/1] (0.00ns)   --->   "br label %1" [sha256d/sha256d.cpp:226]   --->   Operation 493 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.466ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('b') with incoming values : ('a', sha256d/sha256d.cpp:250) [99]  (0.466 ns)
+
+ <State 2>: 8.01ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', sha256d/sha256d.cpp:226) [101]  (0 ns)
+	'mux' operation ('W_load_1_phi', sha256d/sha256d.cpp:236) [287]  (2.53 ns)
+	'add' operation ('tmp19', sha256d/sha256d.cpp:236) [300]  (1.9 ns)
+	'add' operation ('W[16]', sha256d/sha256d.cpp:236) [302]  (3.59 ns)
+	'store' operation (sha256d/sha256d.cpp:236) of variable 'W[16]', sha256d/sha256d.cpp:236 on local variable 'W[63]' [380]  (0 ns)
+
+ <State 3>: 6.12ns
+The critical path consists of the following:
+	'load' operation ('W_15_load_3', sha256d/sha256d.cpp:240) on local variable 'W[15]' [502]  (0 ns)
+	'mux' operation ('tmp_37', sha256d/sha256d.cpp:240) [582]  (2.53 ns)
+	'add' operation ('tmp26', sha256d/sha256d.cpp:240) [584]  (0 ns)
+	'add' operation ('tmp25', sha256d/sha256d.cpp:240) [585]  (3.59 ns)
+
+ <State 4>: 7.17ns
+The critical path consists of the following:
+	'add' operation ('tmp24', sha256d/sha256d.cpp:240) [583]  (0 ns)
+	'add' operation ('t0', sha256d/sha256d.cpp:240) [586]  (3.59 ns)
+	'add' operation ('tmp28', sha256d/sha256d.cpp:250) [603]  (0 ns)
+	'add' operation ('a', sha256d/sha256d.cpp:250) [604]  (3.59 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="sha256d.cpp" path="C:\Users\Dillon\Documents\Code\CryptoFpga\hw\sha256d\sha256d.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="sha256d_test.cpp" path="C:\Users\Dillon\Documents\Code\CryptoFpga\hw\sha256d\tb\sha256d_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

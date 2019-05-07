@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <!--<NullableContextOptions>enable</NullableContextOptions>-->
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CryptoFpga.Algorithms.Sha256d\CryptoFpga.Algorithms.Sha256d.csproj" />
+    <ProjectReference Include="..\CryptoFpga.Common\CryptoFpga.Common.csproj" />
+    <ProjectReference Include="..\CryptoFpga.IO.Stratum\CryptoFpga.IO.Stratum.csproj" />
+  </ItemGroup>
+
+</Project>

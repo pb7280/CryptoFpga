@@ -1,0 +1,205 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'scanhash_sha256d'" level="0">
+<item name = "Date">Fri Apr 26 15:35:07 2019
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">sha256d</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z045ffg900-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.013, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">668, 1556000000279, 668, 1556000000279, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_sha256_transform_1_fu_333">sha256_transform_1, 193, 193, 193, 193, none</column>
+<column name="grp_sha256_transform_fu_361">sha256_transform, 193, 193, 193, 193, none</column>
+<column name="grp_sha256_transform_16_fu_381">sha256_transform_16, 193, 193, 193, 193, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">80, 80, 5, -, -, 16, no</column>
+<column name="- Loop 2">391, 1556000000002, 389, -, -, 1 ~ 4000000000, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 168</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">4, -, 8198, 8452</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 19</column>
+<column name="Register">-, -, 1761, -</column>
+<specialColumn name="Available">1090, 900, 437200, 218600</specialColumn>
+<specialColumn name="Utilization (%)">~0, 0, 2, 3</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="scanhash_sha256d_CTRL_BUS_s_axi_U">scanhash_sha256d_CTRL_BUS_s_axi, 4, 0, 304, 372</column>
+<column name="grp_sha256_transform_fu_361">sha256_transform, 0, 0, 2706, 2775</column>
+<column name="grp_sha256_transform_1_fu_333">sha256_transform_1, 0, 0, 2706, 2775</column>
+<column name="grp_sha256_transform_16_fu_381">sha256_transform_16, 0, 0, 2482, 2530</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_2_fu_405_p2">+, 0, 0, 7, 5, 1</column>
+<column name="n_2_fu_746_p2">+, 0, 0, 32, 1, 32</column>
+<column name="n_fu_393_p2">+, 0, 0, 32, 32, 2</column>
+<column name="num_hashes">+, 0, 0, 32, 32, 32</column>
+<column name="tmp_s_fu_681_p2">-, 0, 0, 32, 1, 32</column>
+<column name="exitcond_fu_399_p2">icmp, 0, 0, 3, 5, 6</column>
+<column name="tmp_76_fu_846_p2">icmp, 0, 0, 12, 32, 32</column>
+<column name="tmp_77_fu_851_p2">icmp, 0, 0, 12, 32, 32</column>
+<column name="tmp_72_fu_411_p2">xor, 0, 0, 6, 5, 6</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">6, 12, 1, 12</column>
+<column name="ap_phi_mux_p_0_phi_fu_325_p4">3, 3, 1, 3</column>
+<column name="i_reg_301">3, 2, 5, 10</column>
+<column name="n1_reg_313">3, 2, 32, 64</column>
+<column name="work_address0">4, 5, 5, 25</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="Htarg_reg_1065">32, 0, 32, 0</column>
+<column name="ap_CS_fsm">11, 0, 11, 0</column>
+<column name="data_15_10_fu_164">32, 0, 32, 0</column>
+<column name="data_15_11_fu_168">32, 0, 32, 0</column>
+<column name="data_15_12_fu_172">32, 0, 32, 0</column>
+<column name="data_15_13_fu_176">32, 0, 32, 0</column>
+<column name="data_15_14_fu_180">32, 0, 32, 0</column>
+<column name="data_15_1_fu_124">32, 0, 32, 0</column>
+<column name="data_15_2_fu_128">32, 0, 32, 0</column>
+<column name="data_15_3_fu_136">32, 0, 32, 0</column>
+<column name="data_15_4_fu_140">32, 0, 32, 0</column>
+<column name="data_15_5_fu_144">32, 0, 32, 0</column>
+<column name="data_15_6_fu_148">32, 0, 32, 0</column>
+<column name="data_15_7_fu_152">32, 0, 32, 0</column>
+<column name="data_15_8_fu_156">32, 0, 32, 0</column>
+<column name="data_15_9_fu_160">32, 0, 32, 0</column>
+<column name="data_15_fu_120">32, 0, 32, 0</column>
+<column name="first_nonce_reg_1060">32, 0, 32, 0</column>
+<column name="grp_sha256_transform_16_fu_381_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_sha256_transform_1_fu_333_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_sha256_transform_fu_361_ap_start_reg">1, 0, 1, 0</column>
+<column name="hash_0_reg_1309">32, 0, 32, 0</column>
+<column name="hash_1_reg_1314">32, 0, 32, 0</column>
+<column name="hash_2_reg_1319">32, 0, 32, 0</column>
+<column name="hash_3_reg_1324">32, 0, 32, 0</column>
+<column name="hash_4_reg_1329">32, 0, 32, 0</column>
+<column name="hash_5_reg_1334">32, 0, 32, 0</column>
+<column name="hash_6_reg_1339">32, 0, 32, 0</column>
+<column name="hash_7_reg_1344">32, 0, 32, 0</column>
+<column name="i_2_reg_1078">5, 0, 5, 0</column>
+<column name="i_reg_301">5, 0, 5, 0</column>
+<column name="max_nonce_read_reg_1055">32, 0, 32, 0</column>
+<column name="midstate_0_reg_1182">32, 0, 32, 0</column>
+<column name="midstate_1_reg_1187">32, 0, 32, 0</column>
+<column name="midstate_2_reg_1192">32, 0, 32, 0</column>
+<column name="midstate_3_reg_1197">32, 0, 32, 0</column>
+<column name="midstate_4_reg_1202">32, 0, 32, 0</column>
+<column name="midstate_5_reg_1207">32, 0, 32, 0</column>
+<column name="midstate_6_reg_1212">32, 0, 32, 0</column>
+<column name="midstate_7_reg_1217">32, 0, 32, 0</column>
+<column name="n1_reg_313">32, 0, 32, 0</column>
+<column name="n_2_reg_1302">32, 0, 32, 0</column>
+<column name="n_reg_1070">32, 0, 32, 0</column>
+<column name="tmp_74_reg_1168">5, 0, 64, 59</column>
+<column name="tmp_94_reg_1173">4, 0, 4, 0</column>
+<column name="tmp_s_reg_1222">32, 0, 32, 0</column>
+<column name="upper_15_10_fu_220">32, 0, 32, 0</column>
+<column name="upper_15_11_fu_224">32, 0, 32, 0</column>
+<column name="upper_15_12_fu_228">32, 0, 32, 0</column>
+<column name="upper_15_13_fu_232">32, 0, 32, 0</column>
+<column name="upper_15_14_fu_236">32, 0, 32, 0</column>
+<column name="upper_15_15_fu_240">32, 0, 32, 0</column>
+<column name="upper_15_1_fu_184">32, 0, 32, 0</column>
+<column name="upper_15_2_fu_188">32, 0, 32, 0</column>
+<column name="upper_15_3_fu_192">32, 0, 32, 0</column>
+<column name="upper_15_4_fu_196">32, 0, 32, 0</column>
+<column name="upper_15_5_fu_200">32, 0, 32, 0</column>
+<column name="upper_15_6_fu_204">32, 0, 32, 0</column>
+<column name="upper_15_7_fu_208">32, 0, 32, 0</column>
+<column name="upper_15_8_fu_212">32, 0, 32, 0</column>
+<column name="upper_15_9_fu_216">32, 0, 32, 0</column>
+<column name="upper_15_fu_132">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_CTRL_BUS_AWVALID">in, 1, s_axi, CTRL_BUS, pointer</column>
+<column name="s_axi_CTRL_BUS_AWREADY">out, 1, s_axi, CTRL_BUS, pointer</column>
+<column name="s_axi_CTRL_BUS_AWADDR">in, 9, s_axi, CTRL_BUS, pointer</column>
+<column name="s_axi_CTRL_BUS_WVALID">in, 1, s_axi, CTRL_BUS, pointer</column>
+<column name="s_axi_CTRL_BUS_WREADY">out, 1, s_axi, CTRL_BUS, pointer</column>
+<column name="s_axi_CTRL_BUS_WDATA">in, 32, s_axi, CTRL_BUS, pointer</column>
+<column name="s_axi_CTRL_BUS_WSTRB">in, 4, s_axi, CTRL_BUS, pointer</column>
+<column name="s_axi_CTRL_BUS_ARVALID">in, 1, s_axi, CTRL_BUS, pointer</column>
+<column name="s_axi_CTRL_BUS_ARREADY">out, 1, s_axi, CTRL_BUS, pointer</column>
+<column name="s_axi_CTRL_BUS_ARADDR">in, 9, s_axi, CTRL_BUS, pointer</column>
+<column name="s_axi_CTRL_BUS_RVALID">out, 1, s_axi, CTRL_BUS, pointer</column>
+<column name="s_axi_CTRL_BUS_RREADY">in, 1, s_axi, CTRL_BUS, pointer</column>
+<column name="s_axi_CTRL_BUS_RDATA">out, 32, s_axi, CTRL_BUS, pointer</column>
+<column name="s_axi_CTRL_BUS_RRESP">out, 2, s_axi, CTRL_BUS, pointer</column>
+<column name="s_axi_CTRL_BUS_BVALID">out, 1, s_axi, CTRL_BUS, pointer</column>
+<column name="s_axi_CTRL_BUS_BREADY">in, 1, s_axi, CTRL_BUS, pointer</column>
+<column name="s_axi_CTRL_BUS_BRESP">out, 2, s_axi, CTRL_BUS, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, scanhash_sha256d, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, scanhash_sha256d, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, scanhash_sha256d, return value</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 928826 on Thu Jun  5 18:17:50 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Wed Jun 11 15:29:43 2014
+# Process ID: 7992
+# Log file: D:/V14_2_Designs/Zynq_Mini_ITX/7z045_embedded/zynq_mini_itx_embedded_design/embedded_design.sdk/webtalk/vivado.log
+# Journal file: D:/V14_2_Designs/Zynq_Mini_ITX/7z045_embedded/zynq_mini_itx_embedded_design/embedded_design.sdk/webtalk\vivado.jou
+#-----------------------------------------------------------
+source sdk.tcl
