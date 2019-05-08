@@ -15,3 +15,5 @@ The goal is to generate and export bitstream. This can be done with the followin
 8. Copy the resulting `embedded_design.sdk` folder to the host that will run peta-linux
 
 Instructions for running peta-linux can be found [here](https://medium.com/developments-and-implementations-on-zynq-7000-ap/install-ubuntu-16-04-lts-on-zynq-zc702-using-petalinux-2016-4-e1da902eaff7). Step 3 can be skipped, since we just did that above. When choosing which distribution to use for the root file system, it must be Ubuntu 16 or higher. 
+
+For convenience, the results from all of the above are included in `linux_boot.zip`. Follow the linked tutorial to setup the SD card and root file system, but instead of running Vivado or peta-linux the zip can be copied to the boot partition instead. Modification to the HLS core will require proper tooling setup.
